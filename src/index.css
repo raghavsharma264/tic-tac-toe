@@ -6,7 +6,7 @@ body {
 
 a {
   text-decoration: none;
-  color: #4285F4;
+  color: #4285f4;
 }
 
 .header {
@@ -30,6 +30,7 @@ a {
   border: 2px solid #4285f4;
   float: left;
   font-size: 40px;
+  color: white;
   height: 100px;
   padding: 0px;
   text-align: center;

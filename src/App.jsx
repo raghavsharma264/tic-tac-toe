@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import "./App.css";
 
@@ -13,6 +13,7 @@ function SquareButton({ value, onClick }) {
 function App() {
   const [square, setSquare] = useState(Array(9).fill(""));
   const [user1Turn, setUser1Turn] = useState(true);
+  const [status, setStatus] = useState("");
 
   function checkWinner(square) {
     const winnerValue = [
@@ -42,11 +43,21 @@ function App() {
 
   function handleClick(getCurrentSquare) {
     let copyOfSquare = { ...square };
-    if (copyOfSquare[getCurrentSquare]) return;
-    copyOfSquare[getCurrentSquare] = user1Turn ? "X" : "0";
+    if (checkWinner(copyOfSquare) || copyOfSquare[getCurrentSquare]) return;
+    copyOfSquare[getCurrentSquare] = user1Turn ? "X" : "O";
     setUser1Turn(!user1Turn);
     setSquare(copyOfSquare);
   }
+
+  useEffect(() => {
+    if (!checkWinner(square) && square.every((item) => item !== "")) {
+      setSquare("It's a Draw! Please restart the game");
+    } else if (checkWinner(square)) {
+      setStatus(`Winner is ${checkWinner(square)}`);
+    } else {
+      setStatus(`Next player is ${user1Turn ? "X" : "O"}`);
+    }
+  }, [square, user1Turn]);
 
   return (
     <>
@@ -70,6 +81,9 @@ function App() {
           <SquareButton value={square[6]} onClick={() => handleClick(6)} />
           <SquareButton value={square[7]} onClick={() => handleClick(7)} />
           <SquareButton value={square[8]} onClick={() => handleClick(8)} />
+        </div>
+        <div className="status">
+          <h1>{status}</h1>
         </div>
       </div>
     </>

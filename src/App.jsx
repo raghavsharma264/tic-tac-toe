@@ -14,8 +14,35 @@ function App() {
   const [square, setSquare] = useState(Array(9).fill(""));
   const [user1Turn, setUser1Turn] = useState(true);
 
+  function checkWinner(square) {
+    const winnerValue = [
+      [0, 1, 2],
+      [3, 4, 5],
+      [6, 7, 8],
+      [2, 5, 8],
+      [0, 4, 8],
+      [2, 4, 6],
+      [0, 3, 6],
+      [1, 4, 7],
+    ];
+
+    for (let i = 0; i < winnerValue.length; i++) {
+      const [value1, value2, value3] = winnerValue[i];
+
+      if (
+        square[value1] &&
+        square[value1] === square[value2] &&
+        square[value1] === square[value3]
+      ) {
+        return square[value1];
+      }
+    }
+    return null;
+  }
+
   function handleClick(getCurrentSquare) {
     let copyOfSquare = { ...square };
+    if (copyOfSquare[getCurrentSquare]) return;
     copyOfSquare[getCurrentSquare] = user1Turn ? "X" : "0";
     setUser1Turn(!user1Turn);
     setSquare(copyOfSquare);

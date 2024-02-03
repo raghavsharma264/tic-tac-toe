@@ -49,6 +49,23 @@ function App() {
     setSquare(copyOfSquare);
   }
 
+  function handleRestart() {
+    setUser1Turn(true);
+    setSquare(Array(9).fill(""));
+  }
+
+  useEffect(() => {
+    console.log("square:", square);
+    console.log("user1Turn:", user1Turn);
+    if (!checkWinner(square) && square.every((item) => item !== "")) {
+      setSquare(`It's a Draw! Please restart the game.`);
+    } else if (checkWinner(square)) {
+      setStatus(`Winner is ${checkWinner(square)}, Please restart the game.`);
+    } else {
+      setStatus(`Next player is ${user1Turn ? "X" : "O"}`);
+    }
+  }, [square, user1Turn]);
+
   return (
     <>
       <div className="header">

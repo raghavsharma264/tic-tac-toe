@@ -42,48 +42,43 @@ function App() {
   }
 
   function handleClick(getCurrentSquare) {
-    let copyOfSquare = { ...square };
+    let copyOfSquare = [...square];
     if (checkWinner(copyOfSquare) || copyOfSquare[getCurrentSquare]) return;
     copyOfSquare[getCurrentSquare] = user1Turn ? "X" : "O";
     setUser1Turn(!user1Turn);
     setSquare(copyOfSquare);
   }
 
-  useEffect(() => {
-    if (!checkWinner(square) && square.every((item) => item !== "")) {
-      setSquare("It's a Draw! Please restart the game");
-    } else if (checkWinner(square)) {
-      setStatus(`Winner is ${checkWinner(square)}`);
-    } else {
-      setStatus(`Next player is ${user1Turn ? "X" : "O"}`);
-    }
-  }, [square, user1Turn]);
-
   return (
     <>
       <div className="header">
         <h1>
-          <a href="">Tic-Tac-Toe</a>
+          <a href="">Tic-Tac-Toe Game</a>
         </h1>
       </div>
-      <div className="container">
-        <div className="row">
-          <SquareButton value={square[0]} onClick={() => handleClick(0)} />
-          <SquareButton value={square[1]} onClick={() => handleClick(1)} />
-          <SquareButton value={square[2]} onClick={() => handleClick(2)} />
-        </div>
-        <div className="row">
-          <SquareButton value={square[3]} onClick={() => handleClick(3)} />
-          <SquareButton value={square[4]} onClick={() => handleClick(4)} />
-          <SquareButton value={square[5]} onClick={() => handleClick(5)} />
-        </div>
-        <div className="row">
-          <SquareButton value={square[6]} onClick={() => handleClick(6)} />
-          <SquareButton value={square[7]} onClick={() => handleClick(7)} />
-          <SquareButton value={square[8]} onClick={() => handleClick(8)} />
-        </div>
-        <div className="status">
-          <h1>{status}</h1>
+      <div className="mainContainer">
+        <div className="container">
+          <div className="row">
+            <SquareButton value={square[0]} onClick={() => handleClick(0)} />
+            <SquareButton value={square[1]} onClick={() => handleClick(1)} />
+            <SquareButton value={square[2]} onClick={() => handleClick(2)} />
+          </div>
+          <div className="row">
+            <SquareButton value={square[3]} onClick={() => handleClick(3)} />
+            <SquareButton value={square[4]} onClick={() => handleClick(4)} />
+            <SquareButton value={square[5]} onClick={() => handleClick(5)} />
+          </div>
+          <div className="row">
+            <SquareButton value={square[6]} onClick={() => handleClick(6)} />
+            <SquareButton value={square[7]} onClick={() => handleClick(7)} />
+            <SquareButton value={square[8]} onClick={() => handleClick(8)} />
+          </div>
+          <div className="status">
+            <h2>{status}</h2>
+          </div>
+          <div className="restart">
+            <button onClick={handleRestart}>Restart</button>
+          </div>
         </div>
       </div>
     </>

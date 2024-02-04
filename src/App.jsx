@@ -57,10 +57,12 @@ function App() {
   useEffect(() => {
     console.log("square:", square);
     console.log("user1Turn:", user1Turn);
-    if (!checkWinner(square) && square.every((item) => item !== "")) {
-      setSquare(`It's a Draw! Please restart the game.`);
-    } else if (checkWinner(square)) {
-      setStatus(`Winner is ${checkWinner(square)}, Please restart the game.`);
+
+    const winner = checkWinner(square);
+    if (winner) {
+      setStatus(`Winner is ${winner}. Please restart the game.`);
+    } else if (square.every((item) => item !== "")) {
+      setStatus(`It's a Draw! Please restart the game.`);
     } else {
       setStatus(`Next player is ${user1Turn ? "X" : "O"}`);
     }
@@ -94,7 +96,9 @@ function App() {
             <h2>{status}</h2>
           </div>
           <div className="restart">
-            <button onClick={handleRestart}>Restart</button>
+            <button className="button" onClick={handleRestart}>
+              Restart
+            </button>
           </div>
         </div>
       </div>

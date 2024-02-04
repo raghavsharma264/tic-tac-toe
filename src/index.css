@@ -3,12 +3,30 @@
 body {
   background-color: black;
   color: white;
-  font-family: "Red Hat Display", sans-serif;;
+  font-family: "Red Hat Display", sans-serif;
 }
 
 a {
   text-decoration: none;
   color: white;
+}
+
+.button {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: medium;
+  background-color: #ffffff00;
+  color: #fff;
+  width: 8.5em;
+  height: 2.9em;
+  border: #3654ff 0.2em solid;
+  border-radius: 11px;
+  text-align: center;
+  transition: all 0.6s ease;
+}
+
+.button:hover {
+  background-color: #3654ff;
+  cursor: pointer;
 }
 
 .header {
@@ -18,12 +36,17 @@ a {
   justify-content: center;
 }
 
+.header :hover {
+  color: #3654ff;
+}
+
 .mainContainer {
   margin-left: 10%;
   margin-right: 10%;
-  padding: 5%;
-  border: 2px solid red;
-  border-radius: 20px;
+  padding: 3%;
+  border: 2px solid white;
+  border-radius: 22px;
+  background-color: #121212;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -40,7 +63,7 @@ a {
 }
 
 .squareButton {
-  border: 2px solid #4285f4;
+  border: 2px solid #3654ff;
   float: left;
   font-size: 40px;
   color: white;
@@ -54,6 +77,11 @@ a {
   background-color: black;
 }
 
+.status {
+  font-size: large;
+}
+
 .restart {
-  width: 10px;
+  display: flex;
+  justify-content: center;
 }

@@ -55,11 +55,14 @@ function App() {
     setSquare(Array(9).fill(""));
   }
 
+  function updateScore() {
+    const user1Score = 0;
+    setScore(user1Score++);
+  }
+
   useEffect(() => {
     console.log("square:", square);
     console.log("user1Turn:", user1Turn);
-    const user1Score = 0;
-    const user2Score = 0;
 
     const winner = checkWinner(square);
     if (winner) {
@@ -69,7 +72,7 @@ function App() {
     } else {
       setStatus(`Next player is ${user1Turn ? "X" : "O"}`);
     }
-
+    updateScore();
   }, [square, user1Turn]);
 
   return (

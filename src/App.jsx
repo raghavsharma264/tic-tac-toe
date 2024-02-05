@@ -14,6 +14,7 @@ function App() {
   const [square, setSquare] = useState(Array(9).fill(""));
   const [user1Turn, setUser1Turn] = useState(true);
   const [status, setStatus] = useState("");
+  const [score, setScore] = useState("");
 
   function checkWinner(square) {
     const winnerValue = [
@@ -57,6 +58,8 @@ function App() {
   useEffect(() => {
     console.log("square:", square);
     console.log("user1Turn:", user1Turn);
+    const user1Score = 0;
+    const user2Score = 0;
 
     const winner = checkWinner(square);
     if (winner) {
@@ -66,6 +69,7 @@ function App() {
     } else {
       setStatus(`Next player is ${user1Turn ? "X" : "O"}`);
     }
+
   }, [square, user1Turn]);
 
   return (
@@ -91,6 +95,9 @@ function App() {
             <SquareButton value={square[6]} onClick={() => handleClick(6)} />
             <SquareButton value={square[7]} onClick={() => handleClick(7)} />
             <SquareButton value={square[8]} onClick={() => handleClick(8)} />
+          </div>
+          <div className="score">
+            <h3>{score}</h3>
           </div>
           <div className="status">
             <h2>{status}</h2>

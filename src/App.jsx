@@ -14,7 +14,8 @@ function App() {
   const [square, setSquare] = useState(Array(9).fill(""));
   const [user1Turn, setUser1Turn] = useState(true);
   const [status, setStatus] = useState("");
-  const [score, setScore] = useState("");
+  const [user1Score, setUser1Score] = useState(0);
+  const [user2Score, setUser2Score] = useState(0);
 
   function checkWinner(square) {
     const winnerValue = [
@@ -55,11 +56,6 @@ function App() {
     setSquare(Array(9).fill(""));
   }
 
-  function updateScore() {
-    const user1Score = 0;
-    setScore(user1Score++);
-  }
-
   useEffect(() => {
     console.log("square:", square);
     console.log("user1Turn:", user1Turn);
@@ -72,7 +68,12 @@ function App() {
     } else {
       setStatus(`Next player is ${user1Turn ? "X" : "O"}`);
     }
-    updateScore();
+    if (winner === "X") {
+      setUser1Score(user1Score + 1);
+    }
+    if (winner === "O") {
+      setUser2Score(user2Score + 1);
+    }
   }, [square, user1Turn]);
 
   return (
@@ -100,15 +101,18 @@ function App() {
             <SquareButton value={square[8]} onClick={() => handleClick(8)} />
           </div>
           <div className="score">
-            <h3>{score}</h3>
+            <h3>Player 1 Score: {user1Score}</h3>
+            <h3>Player 2 Score: {user2Score}</h3>
           </div>
-          <div className="status">
-            <h2>{status}</h2>
-          </div>
-          <div className="restart">
-            <button className="button" onClick={handleRestart}>
-              Restart
-            </button>
+          <div className="containertwo">
+            <div className="status">
+              <h2>{status}</h2>
+            </div>
+            <div className="restart">
+              <button className="button" onClick={handleRestart}>
+                Restart
+              </button>
+            </div>
           </div>
         </div>
       </div>

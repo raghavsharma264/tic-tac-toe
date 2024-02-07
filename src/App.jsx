@@ -46,7 +46,7 @@ function App() {
   function handleClick(getCurrentSquare) {
     let copyOfSquare = [...square];
     if (checkWinner(copyOfSquare) || copyOfSquare[getCurrentSquare]) return;
-    copyOfSquare[getCurrentSquare] = user1Turn ? "X" : "O";
+    copyOfSquare[getCurrentSquare] = user1Turn ? user1Input : user2Input;
     setUser1Turn(!user1Turn);
     setSquare(copyOfSquare);
   }
@@ -66,13 +66,7 @@ function App() {
     } else if (square.every((item) => item !== "")) {
       setStatus(`It's a Draw! Please restart the game.`);
     } else {
-      setStatus(`Next player is ${user1Turn ? "X" : "O"}`);
-    }
-    if (winner === "X") {
-      setUser1Score(user1Score + 1);
-    }
-    if (winner === "O") {
-      setUser2Score(user2Score + 1);
+      setStatus(`Next player is ${user1Turn ? user1Input : user2Input}`);
     }
   }, [square, user1Turn]);
 
@@ -84,6 +78,20 @@ function App() {
         </h1>
       </div>
       <div className="mainContainer">
+        <div className="userInput">
+          <input
+            value={user1Input}
+            onChange={handleInputChange1}
+            placeholder="Type Player 1 Symbol"
+            type="text"
+          />
+          <input
+            value={user2Input}
+            onChange={handleInputChange2}
+            placeholder="Type Location & Enter"
+            type="text"
+          />
+        </div>
         <div className="container">
           <div className="row">
             <SquareButton value={square[0]} onClick={() => handleClick(0)} />

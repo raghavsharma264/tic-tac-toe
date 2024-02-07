@@ -63,6 +63,12 @@ function App() {
     const winner = checkWinner(square);
     if (winner) {
       setStatus(`Winner is ${winner}. Please restart the game.`);
+      if (winner === user1Input) {
+        setUser1Score(user1Score + 1);
+      }
+      if (winner === user2Input) {
+        setUser2Score(user2Score + 1);
+      }
     } else if (square.every((item) => item !== "")) {
       setStatus(`It's a Draw! Please restart the game.`);
     } else {

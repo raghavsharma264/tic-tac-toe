@@ -16,6 +16,15 @@ function App() {
   const [status, setStatus] = useState("");
   const [user1Score, setUser1Score] = useState(0);
   const [user2Score, setUser2Score] = useState(0);
+  const [user1Input, setUser1Input] = useState("X");
+  const [user2Input, setUser2Input] = useState("O");
+
+  const handleInputChange1 = (event1) => {
+    setUser1Input(event1.target.value);
+  };
+  const handleInputChange2 = (event2) => {
+    setUser2Input(event2.target.value);
+  };
 
   function checkWinner(square) {
     const winnerValue = [

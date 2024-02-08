@@ -94,13 +94,13 @@ function App() {
       </div>
       <div className="mainContainer">
         <div className="userInput">
-          <input
+          <input className="inputBox"
             value={user1Input}
             onChange={handleInputChange1}
             placeholder="Type Player 1 Symbol"
             type="text"
           />
-          <input
+          <input className="inputBox"
             value={user2Input}
             onChange={handleInputChange2}
             placeholder="Type Location & Enter"

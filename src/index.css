@@ -11,6 +11,17 @@ a {
   color: white;
 }
 
+.inputBox {
+  font-size: 1.5rem;
+  color: white;
+  font-family: "Red Hat Display", sans-serif;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  margin: 1%;
+  padding: 2%;
+  background-color: #121212;
+}
+
 .button {
   font-family: "Red Hat Display", sans-serif;
   font-size: medium;

@@ -58,9 +58,19 @@ a {
   border: 2px solid white;
   border-radius: 22px;
   background-color: #121212;
+}
+
+.container .score .containertwo .restart {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.userInput {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2%;
 }
 
 .container {

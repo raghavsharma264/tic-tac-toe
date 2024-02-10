@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import TextField from "@mui/material/TextField";
 
 import "./App.css";
 
@@ -94,17 +95,20 @@ function App() {
       </div>
       <div className="mainContainer">
         <div className="userInput">
-          <input className="inputBox"
+          <TextField
+            id="outlined-helperText"
+            label="Player 1 Symbol"
+            defaultValue="Default Value"
             value={user1Input}
             onChange={handleInputChange1}
-            placeholder="Type Player 1 Symbol"
-            type="text"
+            sx={{ color: "white" }}
           />
-          <input className="inputBox"
+          <TextField
+            id="outlined-helperText"
+            label="Player 2 Symbol"
+            defaultValue="Default Value"
             value={user2Input}
             onChange={handleInputChange2}
-            placeholder="Type Location & Enter"
-            type="text"
           />
         </div>
         <div className="container">

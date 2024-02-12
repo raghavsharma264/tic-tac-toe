@@ -96,11 +96,21 @@ function App() {
       <div className="mainContainer">
         <div className="userInput">
           <TextField
+            id="outlined-basic"
+            label="Player 1 Username"
+            variant="outlined"
+          />
+          <TextField
             id="outlined-helperText"
             label="Player 1 Symbol"
             defaultValue="Default Value"
             value={user1Input}
             onChange={handleInputChange1}
+          />
+          <TextField
+            id="outlined-basic"
+            label="Player 2 Username"
+            variant="outlined"
           />
           <TextField
             id="outlined-helperText"

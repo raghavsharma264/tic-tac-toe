@@ -101,7 +101,6 @@ function App() {
             defaultValue="Default Value"
             value={user1Input}
             onChange={handleInputChange1}
-            sx={{ color: "white" }}
           />
           <TextField
             id="outlined-helperText"

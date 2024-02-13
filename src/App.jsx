@@ -95,30 +95,34 @@ function App() {
       </div>
       <div className="mainContainer">
         <div className="userInput">
-          <TextField
-            id="outlined-basic"
-            label="Player 1 Username"
-            variant="outlined"
-          />
-          <TextField
-            id="outlined-helperText"
-            label="Player 1 Symbol"
-            defaultValue="Default Value"
-            value={user1Input}
-            onChange={handleInputChange1}
-          />
-          <TextField
-            id="outlined-basic"
-            label="Player 2 Username"
-            variant="outlined"
-          />
-          <TextField
-            id="outlined-helperText"
-            label="Player 2 Symbol"
-            defaultValue="Default Value"
-            value={user2Input}
-            onChange={handleInputChange2}
-          />
+          <div className="user1">
+            <TextField
+              id="outlined-basic"
+              label="Player 1 Username"
+              variant="outlined"
+            />
+            <TextField
+              id="outlined-helperText"
+              label="Player 1 Symbol"
+              defaultValue="Default Value"
+              value={user1Input}
+              onChange={handleInputChange1}
+            />
+          </div>
+          <div className="user2">
+            <TextField
+              id="outlined-basic"
+              label="Player 2 Username"
+              variant="outlined"
+            />
+            <TextField
+              id="outlined-helperText"
+              label="Player 2 Symbol"
+              defaultValue="Default Value"
+              value={user2Input}
+              onChange={handleInputChange2}
+            />
+          </div>
         </div>
         <div className="container">
           <div className="row">

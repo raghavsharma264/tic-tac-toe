@@ -100,6 +100,7 @@ function App() {
               id="outlined-basic"
               label="Player 1 Username"
               variant="outlined"
+              sx={{ marginBottom: "10px" }}
             />
             <TextField
               id="outlined-helperText"
@@ -114,6 +115,7 @@ function App() {
               id="outlined-basic"
               label="Player 2 Username"
               variant="outlined"
+              sx={{ marginBottom: "10px" }}
             />
             <TextField
               id="outlined-helperText"

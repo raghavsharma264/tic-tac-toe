@@ -71,7 +71,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 2%;
+  margin-bottom: 2px;
   gap: 40px;
 }
 
@@ -96,11 +96,13 @@ a {
 }
 
 .squareButton {
-  border: 2px solid #3654ff;
+  margin: 5px;
+  border: none;
+  border-radius: 10px;
   float: left;
   font-size: 40px;
   font-weight: 600;
-  color: rgb(0, 0, 0);
+  color: white;
   height: 100px;
   padding: 0px;
   text-align: center;
@@ -108,14 +110,16 @@ a {
   margin-right: -1px;
   margin-top: -1px;
   cursor: pointer;
-  background-color: white;
 }
 
 .status {
   font-size: large;
+  display: flex;
+  justify-content: center;
 }
 
 .restart {
+  margin-bottom: 15px;
   display: flex;
   justify-content: center;
 }

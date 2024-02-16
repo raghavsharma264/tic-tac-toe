@@ -23,6 +23,7 @@ a {
 }
 
 .button {
+  margin: 2px;
   font-family: "Red Hat Display", sans-serif;
   font-size: medium;
   font-weight: 800;
@@ -61,7 +62,7 @@ a {
   background-color: white;
 }
 
-.container .score .containertwo .restart {
+.container .score .restart {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -110,6 +111,7 @@ a {
   margin-right: -1px;
   margin-top: -1px;
   cursor: pointer;
+  background-color: #2400ff;
 }
 
 .status {

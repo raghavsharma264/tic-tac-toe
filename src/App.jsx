@@ -126,6 +126,9 @@ function App() {
             />
           </div>
         </div>
+        <div className="status">
+          <h2>{status}</h2>
+        </div>
         <div className="container">
           <div className="row">
             <SquareButton value={square[0]} onClick={() => handleClick(0)} />
@@ -146,15 +149,10 @@ function App() {
             <h3>Player 1 Score: {user1Score}</h3>
             <h3>Player 2 Score: {user2Score}</h3>
           </div>
-          <div className="containertwo">
-            <div className="status">
-              <h2>{status}</h2>
-            </div>
-            <div className="restart">
-              <button className="button" onClick={handleRestart}>
-                Restart
-              </button>
-            </div>
+          <div className="restart">
+            <button className="button" onClick={handleRestart}>
+              Restart
+            </button>
           </div>
         </div>
       </div>

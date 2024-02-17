@@ -120,6 +120,14 @@ a {
   justify-content: center;
 }
 
+.score {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 36px;
+  font-family: "Red Hat Display", sans-serif;
+}
+
 .restart {
   margin-bottom: 15px;
   display: flex;

@@ -146,8 +146,8 @@ function App() {
             <SquareButton value={square[8]} onClick={() => handleClick(8)} />
           </div>
           <div className="score">
-            <h3>Player 1 Score: {user1Score}</h3>
-            <h3>Player 2 Score: {user2Score}</h3>
+            <p>Player 1 score: {user1Score}</p>
+            <p>Player 2 score: {user2Score}</p>
           </div>
           <div className="restart">
             <button className="button" onClick={handleRestart}>

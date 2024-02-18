@@ -17,6 +17,8 @@ function App() {
   const [status, setStatus] = useState("");
   const [user1Score, setUser1Score] = useState(0);
   const [user2Score, setUser2Score] = useState(0);
+  const [user1Name, setUser1Name] = useState("");
+  const [user2Name, setUser2Name] = useState("");
   const [user1Input, setUser1Input] = useState("X");
   const [user2Input, setUser2Input] = useState("O");
 
@@ -82,7 +84,7 @@ function App() {
     } else if (square.every((item) => item !== "")) {
       setStatus(`It's a Draw! Please restart the game.`);
     } else {
-      setStatus(`Next player is ${user1Turn ? user1Input : user2Input}`);
+      setStatus(`Next player is ${user1Name ? user1Name : user2Name}`);
     }
   }, [square, user1Turn]);
 
@@ -100,6 +102,7 @@ function App() {
               id="outlined-basic"
               label="Player 1 Username"
               variant="outlined"
+              onChange={handleInputChangeName1}
               sx={{ marginBottom: "10px" }}
             />
             <TextField
@@ -115,6 +118,7 @@ function App() {
               id="outlined-basic"
               label="Player 2 Username"
               variant="outlined"
+              onChange={handleInputChangeName2}
               sx={{ marginBottom: "10px" }}
             />
             <TextField

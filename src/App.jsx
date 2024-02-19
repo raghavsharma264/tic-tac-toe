@@ -25,6 +25,9 @@ function App() {
   const handleInputChangeName1 = (name1) => {
     setUser1Name(name1.target.value);
   }
+  const handleInputChangeName2 = (name2) => {
+    setUser2Name(name2.target.value);
+  }
 
   const handleInputChange1 = (event1) => {
     setUser1Input(event1.target.value);
@@ -81,9 +84,11 @@ function App() {
       
       if (winner === user1Input) {
         setUser1Score(user1Score + 1);
+        setStatus(`Winner is ${user1Name}. Please restart the game.`);
       }
       if (winner === user2Input) {
         setUser2Score(user2Score + 1);
+        setStatus(`Winner is ${user2Name}. Please restart the game.`);
       }
     } else if (square.every((item) => item !== "")) {
       setStatus(`It's a Draw! Please restart the game.`);

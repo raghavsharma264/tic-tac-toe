@@ -2,7 +2,6 @@
 
 body {
   background-color: rgb(34, 30, 30);
-  color: rgb(0, 0, 0);
   font-family: "Red Hat Display", sans-serif;
 }
 
@@ -117,7 +116,9 @@ a {
 .status {
   font-size: large;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: "Red Hat Display", sans-serif;
 }
 
 .score {

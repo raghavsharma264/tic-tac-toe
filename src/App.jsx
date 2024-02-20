@@ -17,8 +17,8 @@ function App() {
   const [status, setStatus] = useState("");
   const [user1Score, setUser1Score] = useState(0);
   const [user2Score, setUser2Score] = useState(0);
-  const [user1Name, setUser1Name] = useState("");
-  const [user2Name, setUser2Name] = useState("");
+  const [user1Name, setUser1Name] = useState("Player 1");
+  const [user2Name, setUser2Name] = useState("Player 2");
   const [user1Input, setUser1Input] = useState("X");
   const [user2Input, setUser2Input] = useState("O");
 
@@ -108,9 +108,10 @@ function App() {
         <div className="userInput">
           <div className="user1">
             <TextField
-              id="outlined-basic"
-              label="Player 1 Username"
-              variant="outlined"
+              id="outlined-helperText"
+              label="Player 1 username"
+              defaultValue="Default Value"
+              value={user1Name}
               onChange={handleInputChangeName1}
               sx={{ marginBottom: "10px" }}
             />
@@ -124,9 +125,10 @@ function App() {
           </div>
           <div className="user2">
             <TextField
-              id="outlined-basic"
-              label="Player 2 Username"
-              variant="outlined"
+              id="outlined-helperText"
+              label="Player 2 username"
+              defaultValue="Default Value"
+              value={user2Name}
               onChange={handleInputChangeName2}
               sx={{ marginBottom: "10px" }}
             />

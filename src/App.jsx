@@ -24,10 +24,10 @@ function App() {
 
   const handleInputChangeName1 = (name1) => {
     setUser1Name(name1.target.value);
-  }
+  };
   const handleInputChangeName2 = (name2) => {
     setUser2Name(name2.target.value);
-  }
+  };
 
   const handleInputChange1 = (event1) => {
     setUser1Input(event1.target.value);
@@ -81,7 +81,6 @@ function App() {
 
     const winner = checkWinner(square);
     if (winner) {
-      
       if (winner === user1Input) {
         setUser1Score(user1Score + 1);
         setStatus(`Winner is ${user1Name}. Please restart the game.`);
@@ -113,7 +112,6 @@ function App() {
               defaultValue="Default Value"
               value={user1Name}
               onChange={handleInputChangeName1}
-              sx={{ marginBottom: "10px" }}
             />
             <TextField
               id="outlined-helperText"
@@ -121,7 +119,13 @@ function App() {
               defaultValue="Default Value"
               value={user1Input}
               onChange={handleInputChange1}
+              sx={{ width: "40%", marginLeft: "10px" }}
             />
+          </div>
+          <div className="restart">
+            <button className="button" onClick={handleRestart}>
+              Restart
+            </button>
           </div>
           <div className="user2">
             <TextField
@@ -130,7 +134,6 @@ function App() {
               defaultValue="Default Value"
               value={user2Name}
               onChange={handleInputChangeName2}
-              sx={{ marginBottom: "10px" }}
             />
             <TextField
               id="outlined-helperText"
@@ -138,11 +141,16 @@ function App() {
               defaultValue="Default Value"
               value={user2Input}
               onChange={handleInputChange2}
+              sx={{ width: "40%", marginLeft: "10px" }}
             />
           </div>
         </div>
         <div className="status">
-          <h2>{status}</h2>
+          <p className="pst">{status}</p>
+        </div>
+        <div className="score">
+        <p className="pstatus">Player 1 score: {user1Score}</p>
+        <p className="pstatus">Player 2 score: {user2Score}</p>
         </div>
         <div className="container">
           <div className="row">
@@ -159,15 +167,6 @@ function App() {
             <SquareButton value={square[6]} onClick={() => handleClick(6)} />
             <SquareButton value={square[7]} onClick={() => handleClick(7)} />
             <SquareButton value={square[8]} onClick={() => handleClick(8)} />
-          </div>
-          <div className="score">
-            <p>Player 1 score: {user1Score}</p>
-            <p>Player 2 score: {user2Score}</p>
-          </div>
-          <div className="restart">
-            <button className="button" onClick={handleRestart}>
-              Restart
-            </button>
           </div>
         </div>
       </div>

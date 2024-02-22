@@ -149,8 +149,8 @@ function App() {
           <p className="pst">{status}</p>
         </div>
         <div className="score">
-        <p className="pstatus">Player 1 score: {user1Score}</p>
-        <p className="pstatus">Player 2 score: {user2Score}</p>
+        <p className="pstatus">{user1Name} score: {user1Score}</p>
+        <p className="pstatus">{user2Name} score: {user2Score}</p>
         </div>
         <div className="container">
           <div className="row">

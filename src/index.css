@@ -1,13 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;600;700;800;900&display=swap");
 
 body {
-  background-color: rgb(34, 30, 30);
+  background: url("https://images.unsplash.com/photo-1535868463750-c78d9543614f")
+    no-repeat center center/cover;
   font-family: "Red Hat Display", sans-serif;
 }
 
 a {
   text-decoration: none;
   color: white;
+}
+
+.title {
+  border: 2px solid #9900ff;
+  border-radius: 10px;
+  padding: 10px;
 }
 
 .inputBox {
@@ -30,14 +37,14 @@ a {
   color: #000000;
   width: 7rem;
   height: 3.5rem;
-  border: #3654ff 0.2em solid;
+  border: #9900ff 0.2em solid;
   border-radius: 11px;
   text-align: center;
   transition: all 0.6s ease;
 }
 
 .button:hover {
-  background-color: #3654ff;
+  background-color: #9900ff;
   cursor: pointer;
 }
 
@@ -49,16 +56,16 @@ a {
 }
 
 .header :hover {
-  color: #3654ff;
+  color: #9900ff;
 }
 
 .mainContainer {
   margin-left: 10%;
   margin-right: 10%;
   padding: 2%;
-  border: 2px solid white;
-  border-radius: 22px;
-  background-color: rgba(255, 255, 255, 0.85);
+  border: 3px solid #ffffff;
+  border-radius: 25px;
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 .container {
@@ -99,14 +106,14 @@ a {
   margin-right: -1px;
   margin-top: -1px;
   cursor: pointer;
-  background-color: #2400ff;
+  background-color: #160025;
 }
 
 .pst {
   margin: 10px;
   font-size: 2rem;
   font-weight: 900;
-  color: #9900ff;
+  color: #55008d;
 }
 
 .status {
@@ -117,6 +124,7 @@ a {
 }
 
 .score {
+  margin-top: -30px;
   display: flex;
   justify-content: space-between;
   font-size: 1.5rem;

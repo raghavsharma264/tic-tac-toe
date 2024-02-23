@@ -100,7 +100,7 @@ function App() {
     <>
       <div className="header">
         <h1>
-          <a href="">Tic-Tac-Toe Game</a>
+          <a href="" className="title">Tic-Tac-Toe Game</a>
         </h1>
       </div>
       <div className="mainContainer">
@@ -149,8 +149,12 @@ function App() {
           <p className="pst">{status}</p>
         </div>
         <div className="score">
-        <p className="pstatus">{user1Name} score: {user1Score}</p>
-        <p className="pstatus">{user2Name} score: {user2Score}</p>
+          <p className="pstatus">
+            {user1Name} score: {user1Score}
+          </p>
+          <p className="pstatus">
+            {user2Name} score: {user2Score}
+          </p>
         </div>
         <div className="container">
           <div className="row">

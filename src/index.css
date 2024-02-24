@@ -37,14 +37,15 @@ a {
   color: #000000;
   width: 7rem;
   height: 3.5rem;
-  border: #9900ff 0.2em solid;
+  border: #160025 0.2em solid;
   border-radius: 11px;
   text-align: center;
   transition: all 0.6s ease;
 }
 
 .button:hover {
-  background-color: #9900ff;
+  background-color: #160025;
+  color: white;
   cursor: pointer;
 }
 
@@ -110,10 +111,14 @@ a {
 }
 
 .pst {
-  margin: 10px;
+  margin: 5px;
   font-size: 2rem;
-  font-weight: 900;
-  color: #55008d;
+  font-weight: 700;
+  padding: 10px;
+  border: 2px solid #160025;
+  border-radius: 10px;
+  background: #160025;
+  color: white;
 }
 
 .status {

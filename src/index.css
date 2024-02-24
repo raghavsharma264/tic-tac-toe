@@ -124,11 +124,20 @@ a {
 }
 
 .score {
-  margin-top: -30px;
+  /* margin-top: -30px; */
   display: flex;
   justify-content: space-between;
   font-size: 1.5rem;
   font-weight: bold;
+}
+
+.pstatus {
+  margin: 5px;
+  padding: 10px;
+  border: 2px solid #160025;
+  border-radius: 10px;
+  background: #160025;
+  color: white;
 }
 
 .restart {

@@ -62,6 +62,8 @@ function App() {
     return null;
   }
 
+  // Shows all played games result history
+
   function handleClick(getCurrentSquare) {
     let copyOfSquare = [...square];
     if (checkWinner(copyOfSquare) || copyOfSquare[getCurrentSquare]) return;

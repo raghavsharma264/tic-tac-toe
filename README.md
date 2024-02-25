@@ -5,4 +5,5 @@
 ### Features
 - User can set their own symbols.
 - Set username.
+- Shows all played games result history
 

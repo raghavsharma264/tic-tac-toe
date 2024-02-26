@@ -22,6 +22,9 @@ function App() {
   const [user1Input, setUser1Input] = useState("X");
   const [user2Input, setUser2Input] = useState("O");
 
+  const [currWinner, setCurrWinner] = useState("");
+  const [currWinnerSymbol, setCurrWinnerSymbol] = useState("");
+
   const handleInputChangeName1 = (name1) => {
     setUser1Name(name1.target.value);
   };
@@ -62,8 +65,6 @@ function App() {
     return null;
   }
 
-  // Shows all played games result history
-
   function handleClick(getCurrentSquare) {
     let copyOfSquare = [...square];
     if (checkWinner(copyOfSquare) || copyOfSquare[getCurrentSquare]) return;
@@ -77,19 +78,25 @@ function App() {
     setSquare(Array(9).fill(""));
   }
 
+  // Shows all played games result history
+  const winner = checkWinner(square);
+
   useEffect(() => {
     console.log("square:", square);
     console.log("user1Turn:", user1Turn);
 
-    const winner = checkWinner(square);
     if (winner) {
       if (winner === user1Input) {
         setUser1Score(user1Score + 1);
         setStatus(`Winner is ${user1Name}. Please restart the game.`);
+        setCurrWinner(`${user1Name}`);
+        setCurrWinnerSymbol(`${user1Input}`);
       }
       if (winner === user2Input) {
         setUser2Score(user2Score + 1);
         setStatus(`Winner is ${user2Name}. Please restart the game.`);
+        setCurrWinner(`${user2Name}`);
+        setCurrWinnerSymbol(`${user2Input}`);
       }
     } else if (square.every((item) => item !== "")) {
       setStatus(`It's a Draw! Please restart the game.`);
@@ -102,7 +109,9 @@ function App() {
     <>
       <div className="header">
         <h1>
-          <a href="" className="title">Tic-Tac-Toe Game</a>
+          <a href="" className="title">
+            Tic-Tac-Toe Game
+          </a>
         </h1>
       </div>
       <div className="mainContainer">
@@ -174,6 +183,11 @@ function App() {
             <SquareButton value={square[7]} onClick={() => handleClick(7)} />
             <SquareButton value={square[8]} onClick={() => handleClick(8)} />
           </div>
+        </div>
+        <div className="gameHistory">
+          <p>1</p>
+          <p>{currWinner}</p>
+          <p>{currWinnerSymbol}</p>
         </div>
       </div>
     </>

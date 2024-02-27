@@ -24,6 +24,7 @@ function App() {
 
   const [currWinner, setCurrWinner] = useState("");
   const [currWinnerSymbol, setCurrWinnerSymbol] = useState("");
+  const [history, setHistory] = useState([]);
 
   const handleInputChangeName1 = (name1) => {
     setUser1Name(name1.target.value);
@@ -80,6 +81,9 @@ function App() {
 
   // Shows all played games result history
   const winner = checkWinner(square);
+  console.log(winner);
+
+  let result = winner;
 
   useEffect(() => {
     console.log("square:", square);
@@ -186,9 +190,8 @@ function App() {
         </div>
         <div className="gameHistory">
           <p>1</p>
-          <p>{currWinner}</p>
-          <p>{currWinnerSymbol}</p>
         </div>
+        
       </div>
     </>
   );

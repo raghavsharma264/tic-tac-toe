@@ -196,9 +196,9 @@ function App() {
             <SquareButton value={square[8]} onClick={() => handleClick(8)} />
           </div>
         </div>
-        <div className="gameHistory">
+        {/* <div className="gameHistory">
           <p>1</p>
-        </div>
+        </div> */}
         <div className="gameHistory">
           <p>Game History</p>
           {history.map((item, index) => (

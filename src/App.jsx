@@ -83,8 +83,6 @@ function App() {
   const winner = checkWinner(square);
   console.log(winner);
 
-  let result = winner;
-
   useEffect(() => {
     console.log("square:", square);
     console.log("user1Turn:", user1Turn);
@@ -95,20 +93,12 @@ function App() {
         setStatus(`Winner is ${user1Name}. Please restart the game.`);
         setCurrWinner(`${user1Name}`);
         setCurrWinnerSymbol(`${user1Input}`);
-        setHistory((prevHistory) => [
-          ...prevHistory,
-          { user1Name, user1Input },
-        ]);
       }
       if (winner === user2Input) {
         setUser2Score(user2Score + 1);
         setStatus(`Winner is ${user2Name}. Please restart the game.`);
         setCurrWinner(`${user2Name}`);
         setCurrWinnerSymbol(`${user2Input}`);
-        setHistory((prevHistory) => [
-          ...prevHistory,
-          { user2Name, user2Input },
-        ]);
       }
     } else if (square.every((item) => item !== "")) {
       setStatus(`It's a Draw! Please restart the game.`);
@@ -196,17 +186,10 @@ function App() {
             <SquareButton value={square[8]} onClick={() => handleClick(8)} />
           </div>
         </div>
-        {/* <div className="gameHistory">
-          <p>1</p>
-        </div> */}
         <div className="gameHistory">
-          <p>Game History</p>
-          {history.map((item, index) => (
-            <div key={index} className="historyItem">
-              <p>{currWinner}</p>
-              <p>{currWinnerSymbol}</p>
-            </div>
-          ))}
+          <p>1</p>
+          <p>{currWinner}</p>
+          <p>{currWinnerSymbol}</p>
         </div>
       </div>
     </>

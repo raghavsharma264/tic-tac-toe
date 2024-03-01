@@ -24,7 +24,7 @@ function App() {
 
   const [currWinner, setCurrWinner] = useState("");
   const [currWinnerSymbol, setCurrWinnerSymbol] = useState("");
-  const [history, setHistory] = useState([]);
+  const [history, setGameHistory] = useState([]);
 
   const handleInputChangeName1 = (name1) => {
     setUser1Name(name1.target.value);
@@ -79,9 +79,10 @@ function App() {
     setSquare(Array(9).fill(""));
   }
 
-  // Shows all played games result history
   const winner = checkWinner(square);
   console.log(winner);
+
+  // Shows all played games result history
 
   useEffect(() => {
     console.log("square:", square);
@@ -190,6 +191,15 @@ function App() {
           <p>1</p>
           <p>{currWinner}</p>
           <p>{currWinnerSymbol}</p>
+        </div>
+        <div className="game">
+          {history.map((historyItem, index) => (
+            <div key={index} className="gameHistory">
+              <p>{index + 1}</p>
+              <p>{currWinner}</p>
+              <p>{currWinnerSymbol}</p>
+            </div>
+          ))}
         </div>
       </div>
     </>

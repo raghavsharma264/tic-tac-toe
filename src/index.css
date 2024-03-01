@@ -168,4 +168,12 @@ a {
   border-radius: 10px;
 }
 
+.gameHistoryText {
+  display: flex;
+  justify-content: center;
+  border: 2px solid #160025;
+  border-radius: 10px;
+  background: #160025;
+  color: white;
+}
 

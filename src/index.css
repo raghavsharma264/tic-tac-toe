@@ -22,7 +22,7 @@ a {
   color: white;
   font-family: "Red Hat Display", sans-serif;
   border: 2px solid rgb(255, 255, 255);
-  border-radius: 5px;
+  border-radius: 10px;
   margin: 1%;
   padding: 2%;
   background-color: #121212;
@@ -38,7 +38,7 @@ a {
   width: 7rem;
   height: 3.5rem;
   border: #160025 0.2em solid;
-  border-radius: 11px;
+  border-radius: 10px;
   text-align: center;
   transition: all 0.6s ease;
 }
@@ -65,7 +65,7 @@ a {
   margin-right: 10%;
   padding: 2%;
   border: 3px solid #ffffff;
-  border-radius: 25px;
+  border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.8);
 }
 
@@ -177,3 +177,8 @@ a {
   color: white;
 }
 
+.gameContainer {
+  margin-top: 10px;
+  border: 3px solid #160025;
+  border-radius: 10px;
+}

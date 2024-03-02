@@ -84,6 +84,7 @@ function App() {
 
   // Shows all played games result history
 
+
   useEffect(() => {
     console.log("square:", square);
     console.log("user1Turn:", user1Turn);
@@ -94,12 +95,14 @@ function App() {
         setStatus(`Winner is ${user1Name}. Please restart the game.`);
         setCurrWinner(`${user1Name}`);
         setCurrWinnerSymbol(`${user1Input}`);
+        // setGameHistory(newGameHistory);
       }
       if (winner === user2Input) {
         setUser2Score(user2Score + 1);
         setStatus(`Winner is ${user2Name}. Please restart the game.`);
         setCurrWinner(`${user2Name}`);
         setCurrWinnerSymbol(`${user2Input}`);
+        // setGameHistory(newGameHistory);
       }
     } else if (square.every((item) => item !== "")) {
       setStatus(`It's a Draw! Please restart the game.`);
@@ -192,14 +195,19 @@ function App() {
           <p>{currWinner}</p>
           <p>{currWinnerSymbol}</p>
         </div>
-        <div className="game">
-          {history.map((historyItem, index) => (
-            <div key={index} className="gameHistory">
-              <p>{index + 1}</p>
-              <p>{currWinner}</p>
-              <p>{currWinnerSymbol}</p>
-            </div>
-          ))}
+          <div className="gameHistoryText">
+            <h3>Game History</h3>
+          </div>
+        <div className="gameContainer">
+          <div className="game">
+            {history.map((historyItem, index) => (
+              <div key={index} className="gameHistory">
+                <p>{index + 1}</p>
+                <p>{currWinner}</p>
+                <p>{currWinnerSymbol}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </>

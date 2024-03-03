@@ -90,22 +90,22 @@ function App() {
   const newGameHistory = [...history, winner];
   // useEffect(() => {
   //   if (winner) {
-  //     setGameHistory(newGameHistory);
+      setGameHistory(newGameHistory);
   //   }
   // }, [winner]);
   
   useEffect(() => {
     if (winner) {
       if (winner === user1Input) {
-        setUser1WinnerHistory(newGameHistory);
+        setUser1WinnerHistory(`${user1Input}`);
         // setGameHistory(newGameHistory);
       }
       if (winner === user2Input) {
-        setUser2WinnerHistory(newGameHistory);
+        setUser2WinnerHistory(`${user2Input}`);
         // setGameHistory(newGameHistory);
       }
     } else if (square.every((item) => item !== "")) {
-      setDrawHistory(newGameHistory);
+      setDrawHistory(`Draw`);
     }
     }, [winner]);
 
@@ -227,9 +227,8 @@ function App() {
             {history.map((historyItem, index) => (
               <div key={index} className="gameHistory">
                 <p>{index + 1}</p>
-                {/* <p>{currWinner}</p> */}
-                {/* <p>{currWinnerSymbol}</p> */}
-                <p>{history ? user1WinnerHistory :  user2WinnerHistory}</p>
+                <p>{user1WinnerHistory}</p>
+                <p>{user2WinnerHistory}</p>
                 <p>{drawHistory}</p>
               </div>
             ))}

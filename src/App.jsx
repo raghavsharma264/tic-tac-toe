@@ -26,9 +26,7 @@ function App() {
   const [currWinnerSymbol, setCurrWinnerSymbol] = useState("");
   const [history, setGameHistory] = useState([]);
 
-  const [user1WinnerHistory, setUser1WinnerHistory] = useState("");
-  const [user2WinnerHistory, setUser2WinnerHistory] = useState("");
-  const [drawHistory, setDrawHistory] = useState("");
+  let userWinnerHistory;
 
   const handleInputChangeName1 = (name1) => {
     setUser1Name(name1.target.value);
@@ -88,26 +86,7 @@ function App() {
 
   // Shows all played games result history
   const newGameHistory = [...history, winner];
-  // useEffect(() => {
-  //   if (winner) {
-      setGameHistory(newGameHistory);
-  //   }
-  // }, [winner]);
-  
-  useEffect(() => {
-    if (winner) {
-      if (winner === user1Input) {
-        setUser1WinnerHistory(`${user1Input}`);
-        // setGameHistory(newGameHistory);
-      }
-      if (winner === user2Input) {
-        setUser2WinnerHistory(`${user2Input}`);
-        // setGameHistory(newGameHistory);
-      }
-    } else if (square.every((item) => item !== "")) {
-      setDrawHistory(`Draw`);
-    }
-    }, [winner]);
+  console.log(newGameHistory);
 
   useEffect(() => {
     console.log("square:", square);
@@ -219,17 +198,16 @@ function App() {
           <p>{currWinner}</p>
           <p>{currWinnerSymbol}</p>
         </div>
-          <div className="gameHistoryText">
-            <h3>Game History</h3>
-          </div>
+        <div className="gameHistoryText">
+          <h3>Game History</h3>
+        </div>
         <div className="gameContainer">
           <div className="game">
             {history.map((historyItem, index) => (
               <div key={index} className="gameHistory">
                 <p>{index + 1}</p>
-                <p>{user1WinnerHistory}</p>
-                <p>{user2WinnerHistory}</p>
-                <p>{drawHistory}</p>
+                <p>{userWinnerHistory}</p>
+                <p>{currWinnerSymbol}</p>
               </div>
             ))}
           </div>

@@ -88,6 +88,22 @@ function App() {
   const newGameHistory = [...history, winner];
   console.log(newGameHistory);
 
+  function winnerHistory() {
+    if (winner) {
+      if (winner === user1Input) {
+        userWinnerHistory = "Player 1";
+        setGameHistory(`${userWinnerHistory}`);
+      }
+      if (winner === user2Input) {
+        userWinnerHistory = "Player 2";
+        setGameHistory(`${userWinnerHistory}`);
+      }
+    } else if (square.every((item) => item !== "")) {
+      userWinnerHistory = "Draw!";
+      setGameHistory(`${userWinnerHistory}`);
+    }
+  }
+
   useEffect(() => {
     console.log("square:", square);
     console.log("user1Turn:", user1Turn);

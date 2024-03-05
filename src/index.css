@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;600;700;800;900&display=swap");
 
+* {
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background: url("https://images.unsplash.com/photo-1535868463750-c78d9543614f")
     no-repeat center center/cover;

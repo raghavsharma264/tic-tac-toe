@@ -29,6 +29,8 @@ function App() {
   const [user2WinnerHistory, setUser2WinnerHistory] = useState("Player 2");
   const [drawWinnerHistory, setDrawWinnerHistory] = useState("Player 2");
 
+  // let userWinnerHistory;
+
   const handleInputChangeName1 = (name1) => {
     setUser1Name(name1.target.value);
   };
@@ -89,7 +91,18 @@ function App() {
   const newGameHistory = [...history, winner];
   console.log( 'new', newGameHistory);
 
-
+  // function winnerHistory() {
+  //   if (winner) {
+  //     if (winner === user1Input) {
+  //       setUser1WinnerHistory(`${user1WinnerHistory}`);
+  //     }
+  //     if (winner === user2Input) {
+  //       setUser2WinnerHistory(`${user2WinnerHistory}`);
+  //     }
+  //   } else if (square.every((item) => item !== "")) {
+  //     setDrawWinnerHistory(`${drawWinnerHistory}`);
+  //   }
+  // }
 
   useEffect(() => {
     console.log("square:", square);
@@ -102,7 +115,7 @@ function App() {
         setCurrWinner(`${user1Name}`);
         setCurrWinnerSymbol(`${user1Input}`);
         setUser1WinnerHistory(`${user1WinnerHistory}`);
-        setGameHistory(newGameHistory);
+        // setGameHistory(newGameHistory);
       }
       if (winner === user2Input) {
         setUser2Score(user2Score + 1);
@@ -110,7 +123,7 @@ function App() {
         setCurrWinner(`${user2Name}`);
         setCurrWinnerSymbol(`${user2Input}`);
         setUser2WinnerHistory(`${user2WinnerHistory}`);
-        setGameHistory(newGameHistory);
+        // setGameHistory(newGameHistory);
       }
     } else if (square.every((item) => item !== "")) {
       setStatus(`It's a Draw! Please restart the game.`);

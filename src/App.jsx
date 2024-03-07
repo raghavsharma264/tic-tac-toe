@@ -115,7 +115,7 @@ function App() {
         setCurrWinner(`${user1Name}`);
         setCurrWinnerSymbol(`${user1Input}`);
         setUser1WinnerHistory(`${user1WinnerHistory}`);
-        setGameHistory(newGameHistory);
+        // setGameHistory(newGameHistory);
       }
       if (winner === user2Input) {
         setUser2Score(user2Score + 1);
@@ -123,7 +123,7 @@ function App() {
         setCurrWinner(`${user2Name}`);
         setCurrWinnerSymbol(`${user2Input}`);
         setUser2WinnerHistory(`${user2WinnerHistory}`);
-        setGameHistory(newGameHistory);
+        // setGameHistory(newGameHistory);
       }
     } else if (square.every((item) => item !== "")) {
       setStatus(`It's a Draw! Please restart the game.`);
@@ -225,6 +225,9 @@ function App() {
             {history.map((historyItem, index) => (
               <div key={index} className="gameHistory">
                 <p>{index + 1}</p>
+                <p>{user1WinnerHistory}</p>
+                <p>{user1WinnerHistory}</p>
+                <p>{currWinnerSymbol}</p>
               </div>
             ))}
           </div>

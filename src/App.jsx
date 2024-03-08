@@ -91,18 +91,18 @@ function App() {
   const newGameHistory = [...history, winner];
   console.log( 'new', newGameHistory);
 
-  function winnerHistory() {
-    if (winner) {
-      if (winner === user1Input) {
-        userWinnerHistory = user1WinnerHistory;
-      }
-      if (winner === user2Input) {
-        userWinnerHistory = user2WinnerHistory;
-      }
-    } else if (square.every((item) => item !== "")) {
-      userWinnerHistory = drawWinnerHistory;
-    }
-  }
+  // function winnerHistory() {
+  //   if (winner) {
+  //     if (winner === user1Input) {
+  //       userWinnerHistory = user1WinnerHistory;
+  //     }
+  //     if (winner === user2Input) {
+  //       userWinnerHistory = user2WinnerHistory;
+  //     }
+  //   } else if (square.every((item) => item !== "")) {
+  //     userWinnerHistory = drawWinnerHistory;
+  //   }
+  // }
 
   useEffect(() => {
     console.log("square:", square);
@@ -114,20 +114,20 @@ function App() {
         setStatus(`Winner is ${user1Name}. Please restart the game.`);
         setCurrWinner(`${user1Name}`);
         setCurrWinnerSymbol(`${user1Input}`);
-        setUser1WinnerHistory(`${user1WinnerHistory}`);
-        // setGameHistory(newGameHistory);
+        // setUser1WinnerHistory(`${user1WinnerHistory}`);
+        setGameHistory(newGameHistory);
       }
       if (winner === user2Input) {
         setUser2Score(user2Score + 1);
         setStatus(`Winner is ${user2Name}. Please restart the game.`);
         setCurrWinner(`${user2Name}`);
         setCurrWinnerSymbol(`${user2Input}`);
-        setUser2WinnerHistory(`${user2WinnerHistory}`);
-        // setGameHistory(newGameHistory);
+        // setUser2WinnerHistory(`${user2WinnerHistory}`);
+        setGameHistory(newGameHistory);
       }
     } else if (square.every((item) => item !== "")) {
       setStatus(`It's a Draw! Please restart the game.`);
-      setDrawWinnerHistory(`${drawWinnerHistory}`);
+      // setDrawWinnerHistory(`${drawWinnerHistory}`);
     } else {
       setStatus(`Next player is ${user1Turn ? user1Name : user2Name}`);
     }

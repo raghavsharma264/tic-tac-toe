@@ -25,9 +25,9 @@ function App() {
   const [currWinner, setCurrWinner] = useState("");
   const [currWinnerSymbol, setCurrWinnerSymbol] = useState("");
   const [history, setGameHistory] = useState([]);
-  const [user1WinnerHistory, setUser1WinnerHistory] = useState("Player 1");
-  const [user2WinnerHistory, setUser2WinnerHistory] = useState("Player 2");
-  const [drawWinnerHistory, setDrawWinnerHistory] = useState("Player 2");
+  // const [user1WinnerHistory, setUser1WinnerHistory] = useState("Player 1");
+  // const [user2WinnerHistory, setUser2WinnerHistory] = useState("Player 2");
+  // const [drawWinnerHistory, setDrawWinnerHistory] = useState("Player 2");
 
   let userWinnerHistory;
 
@@ -225,8 +225,8 @@ function App() {
             {history.map((historyItem, index) => (
               <div key={index} className="gameHistory">
                 <p>{index + 1}</p>
-                <p>{user1WinnerHistory}</p>
-                <p>{user1WinnerHistory}</p>
+                {/* <p>{user1WinnerHistory}</p>
+                <p>{user1WinnerHistory}</p> */}
                 <p>{currWinnerSymbol}</p>
               </div>
             ))}

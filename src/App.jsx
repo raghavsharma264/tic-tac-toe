@@ -225,8 +225,8 @@ function App() {
             {history.map((historyItem, index) => (
               <div key={index} className="gameHistory">
                 <p>{index + 1}</p>
-                {/* <p>{user1WinnerHistory}</p>
-                <p>{user1WinnerHistory}</p> */}
+                <p>{user1WinnerHistory}</p>
+                <p>{user1WinnerHistory}</p>
                 <p>{currWinnerSymbol}</p>
               </div>
             ))}

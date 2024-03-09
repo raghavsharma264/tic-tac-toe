@@ -77,6 +77,17 @@ function App() {
     copyOfSquare[getCurrentSquare] = user1Turn ? user1Input : user2Input;
     setUser1Turn(!user1Turn);
     setSquare(copyOfSquare);
+  
+    const winner = checkWinner(copyOfSquare);
+  
+    if (winner) {
+      const winnerInfo = {
+        winner: winner === user1Input ? user1Name : user2Name,
+        symbol: winner === user1Input ? user1Input : user2Input,
+      };
+  
+      setGameHistory([winnerInfo, ...history]);
+    }
   }
 
   function handleRestart() {

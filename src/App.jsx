@@ -77,15 +77,15 @@ function App() {
     copyOfSquare[getCurrentSquare] = user1Turn ? user1Input : user2Input;
     setUser1Turn(!user1Turn);
     setSquare(copyOfSquare);
-  
+
     const winner = checkWinner(copyOfSquare);
-  
+
     if (winner) {
       const winnerInfo = {
         winner: winner === user1Input ? user1Name : user2Name,
         symbol: winner === user1Input ? user1Input : user2Input,
       };
-  
+
       setGameHistory([winnerInfo, ...history]);
     }
   }
@@ -100,7 +100,7 @@ function App() {
 
   // Shows all played games result history
   const newGameHistory = [...history, winner];
-  console.log( 'new', newGameHistory);
+  console.log("new", newGameHistory);
 
   // function winnerHistory() {
   //   if (winner) {
@@ -120,25 +120,25 @@ function App() {
     console.log("user1Turn:", user1Turn);
 
     if (winner) {
+      const winnerName = winner === user1Input ? user1Name : user2Name;
+      const winnerSymbol = winner === user1Input ? user1Input : user2Input;
+
+      setGameHistory([
+        { winner: winnerName, symbol: winnerSymbol },
+        ...history,
+      ]);
+      setCurrWinner(winnerName);
+      setCurrWinnerSymbol(winnerSymbol);
+
       if (winner === user1Input) {
         setUser1Score(user1Score + 1);
         setStatus(`Winner is ${user1Name}. Please restart the game.`);
-        setCurrWinner(`${user1Name}`);
-        setCurrWinnerSymbol(`${user1Input}`);
-        // setUser1WinnerHistory(`${user1WinnerHistory}`);
-        setGameHistory(newGameHistory);
-      }
-      if (winner === user2Input) {
+      } else if (winner === user2Input) {
         setUser2Score(user2Score + 1);
         setStatus(`Winner is ${user2Name}. Please restart the game.`);
-        setCurrWinner(`${user2Name}`);
-        setCurrWinnerSymbol(`${user2Input}`);
-        // setUser2WinnerHistory(`${user2WinnerHistory}`);
-        setGameHistory(newGameHistory);
       }
-    } else if (square.every((item) => item !== "")) {
+    } else if (copyOfSquare.every((item) => item !== "")) {
       setStatus(`It's a Draw! Please restart the game.`);
-      // setDrawWinnerHistory(`${drawWinnerHistory}`);
     } else {
       setStatus(`Next player is ${user1Turn ? user1Name : user2Name}`);
     }

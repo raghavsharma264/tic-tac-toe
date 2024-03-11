@@ -25,9 +25,6 @@ function App() {
   const [currWinner, setCurrWinner] = useState("");
   const [currWinnerSymbol, setCurrWinnerSymbol] = useState("");
   const [history, setGameHistory] = useState([]);
-  // const [user1WinnerHistory, setUser1WinnerHistory] = useState("Player 1");
-  // const [user2WinnerHistory, setUser2WinnerHistory] = useState("Player 2");
-  // const [drawWinnerHistory, setDrawWinnerHistory] = useState("Player 2");
 
   let userWinnerHistory;
 
@@ -77,17 +74,6 @@ function App() {
     copyOfSquare[getCurrentSquare] = user1Turn ? user1Input : user2Input;
     setUser1Turn(!user1Turn);
     setSquare(copyOfSquare);
-
-    // const winner = checkWinner(copyOfSquare);
-
-    // if (winner) {
-    //   const winnerInfo = {
-    //     winner: winner === user1Input ? user1Name : user2Name,
-    //     symbol: winner === user1Input ? user1Input : user2Input,
-    //   };
-
-    //   setGameHistory([winnerInfo, ...history]);
-    // }
   }
 
   function handleRestart() {
@@ -101,19 +87,6 @@ function App() {
   // Shows all played games result history
   const newGameHistory = [...history, winner];
   console.log("new", newGameHistory);
-
-  // function winnerHistory() {
-  //   if (winner) {
-  //     if (winner === user1Input) {
-  //       userWinnerHistory = user1WinnerHistory;
-  //     }
-  //     if (winner === user2Input) {
-  //       userWinnerHistory = user2WinnerHistory;
-  //     }
-  //   } else if (square.every((item) => item !== "")) {
-  //     userWinnerHistory = drawWinnerHistory;
-  //   }
-  // }
 
   useEffect(() => {
     console.log("square:", square);

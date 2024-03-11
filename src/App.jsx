@@ -137,7 +137,9 @@ function App() {
         setUser2Score(user2Score + 1);
         setStatus(`Winner is ${user2Name}. Please restart the game.`);
       }
-    } else if (copyOfSquare.every((item) => item !== "")) {
+    } else if (square.every((item) => item !== "")) {
+      // Handle draw
+      setGameHistory([...history, { winner: "Draw", symbol: "N/A" }]);
       setStatus(`It's a Draw! Please restart the game.`);
     } else {
       setStatus(`Next player is ${user1Turn ? user1Name : user2Name}`);
@@ -235,10 +237,9 @@ function App() {
           <div className="game">
             {history.map((historyItem, index) => (
               <div key={index} className="gameHistory">
-                <p>{index + 1}</p>
-                <p>{user1WinnerHistory}</p>
-                <p>{user1WinnerHistory}</p>
-                <p>{currWinnerSymbol}</p>
+                <p>{history.length - index}</p>
+                <p>{historyItem.winner}</p>
+                <p>{historyItem.symbol}</p>
               </div>
             ))}
           </div>

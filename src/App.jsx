@@ -102,6 +102,9 @@ function App() {
       ]);
       setCurrWinner(winnerName);
       setCurrWinnerSymbol(winnerSymbol);
+      // console.log("history:", history);
+      // Handle draw
+      setGameHistory([...history, { winner: "Draw", symbol: "N/A" }]);
 
       if (winner === user1Input) {
         setUser1Score(user1Score + 1);
@@ -111,8 +114,6 @@ function App() {
         setStatus(`Winner is ${user2Name}. Please restart the game.`);
       }
     } else if (square.every((item) => item !== "")) {
-      // Handle draw
-      setGameHistory([...history, { winner: "Draw", symbol: "N/A" }]);
       setStatus(`It's a Draw! Please restart the game.`);
     } else {
       setStatus(`Next player is ${user1Turn ? user1Name : user2Name}`);

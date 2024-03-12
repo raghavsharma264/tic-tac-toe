@@ -89,8 +89,8 @@ function App() {
   console.log("new", newGameHistory);
 
   useEffect(() => {
-    console.log("square:", square);
-    console.log("user1Turn:", user1Turn);
+    // console.log("square:", square);
+    // console.log("user1Turn:", user1Turn);
 
     if (winner) {
       const winnerName = winner === user1Input ? user1Name : user2Name;
@@ -103,8 +103,6 @@ function App() {
       setCurrWinner(winnerName);
       setCurrWinnerSymbol(winnerSymbol);
       // console.log("history:", history);
-      // Handle draw
-      setGameHistory([...history, { winner: "Draw", symbol: "N/A" }]);
 
       if (winner === user1Input) {
         setUser1Score(user1Score + 1);
@@ -114,6 +112,8 @@ function App() {
         setStatus(`Winner is ${user2Name}. Please restart the game.`);
       }
     } else if (square.every((item) => item !== "")) {
+      // Handle draw
+      setGameHistory([...history, { winner: "Draw", symbol: "N/A" }]);
       setStatus(`It's a Draw! Please restart the game.`);
     } else {
       setStatus(`Next player is ${user1Turn ? user1Name : user2Name}`);

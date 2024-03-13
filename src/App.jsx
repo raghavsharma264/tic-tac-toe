@@ -88,37 +88,37 @@ function App() {
   const newGameHistory = [...history, winner];
   console.log("new", newGameHistory);
 
-  useEffect(() => {
-    // console.log("square:", square);
-    // console.log("user1Turn:", user1Turn);
+  // useEffect(() => {
+  //   // console.log("square:", square);
+  //   // console.log("user1Turn:", user1Turn);
 
-    if (winner) {
-      const winnerName = winner === user1Input ? user1Name : user2Name;
-      const winnerSymbol = winner === user1Input ? user1Input : user2Input;
+  //   if (winner) {
+  //     const winnerName = winner === user1Input ? user1Name : user2Name;
+  //     const winnerSymbol = winner === user1Input ? user1Input : user2Input;
 
-      setGameHistory([
-        { winner: winnerName, symbol: winnerSymbol },
-        ...history,
-      ]);
-      setCurrWinner(winnerName);
-      setCurrWinnerSymbol(winnerSymbol);
-      // console.log("history:", history);
+  //     setGameHistory([
+  //       { winner: winnerName, symbol: winnerSymbol },
+  //       ...history,
+  //     ]);
+  //     setCurrWinner(winnerName);
+  //     setCurrWinnerSymbol(winnerSymbol);
+  //     // console.log("history:", history);
 
-      if (winner === user1Input) {
-        setUser1Score(user1Score + 1);
-        setStatus(`Winner is ${user1Name}. Please restart the game.`);
-      } else if (winner === user2Input) {
-        setUser2Score(user2Score + 1);
-        setStatus(`Winner is ${user2Name}. Please restart the game.`);
-      }
-    } else if (square.every((item) => item !== "")) {
-      // Handle draw
-      setGameHistory([...history, { winner: "Draw", symbol: "N/A" }]);
-      setStatus(`It's a Draw! Please restart the game.`);
-    } else {
-      setStatus(`Next player is ${user1Turn ? user1Name : user2Name}`);
-    }
-  }, [square, user1Turn]);
+  //     if (winner === user1Input) {
+  //       setUser1Score(user1Score + 1);
+  //       setStatus(`Winner is ${user1Name}. Please restart the game.`);
+  //     } else if (winner === user2Input) {
+  //       setUser2Score(user2Score + 1);
+  //       setStatus(`Winner is ${user2Name}. Please restart the game.`);
+  //     }
+  //   } else if (square.every((item) => item !== "")) {
+  //     // Handle draw
+  //     setGameHistory([...history, { winner: "Draw", symbol: "N/A" }]);
+  //     setStatus(`It's a Draw! Please restart the game.`);
+  //   } else {
+  //     setStatus(`Next player is ${user1Turn ? user1Name : user2Name}`);
+  //   }
+  // }, [square, user1Turn]);
 
   return (
     <>

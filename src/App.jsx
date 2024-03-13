@@ -120,6 +120,34 @@ function App() {
   //   }
   // }, [square, user1Turn]);
 
+  useEffect(() => {
+    if (winner) {
+      const winnerName = winner === user1Input ? user1Name : user2Name;
+      const winnerSymbol = winner === user1Input ? user1Input : user2Input;
+
+      setGameHistory([
+        { winner: winnerName, symbol: winnerSymbol },
+        ...history,
+      ]);
+      setCurrWinner(winnerName);
+      setCurrWinnerSymbol(winnerSymbol);
+
+      if (winner === user1Input) {
+        setUser1Score(user1Score + 1);
+        setStatus(`Winner is ${user1Name}. Please restart the game.`);
+      } else if (winner === user2Input) {
+        setUser2Score(user2Score + 1);
+        setStatus(`Winner is ${user2Name}. Please restart the game.`);
+      }
+    } else if (square.every((item) => item !== "")) {
+      // Handle draw separately
+      setGameHistory([{ winner: "Draw", symbol: "N/A" }, ...history]);
+      setStatus(`It's a Draw! Please restart the game.`);
+    } else {
+      setStatus(`Next player is ${user1Turn ? user1Name : user2Name}`);
+    }
+  }, [square, user1Turn]);
+
   return (
     <>
       <div className="header">

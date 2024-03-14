@@ -232,22 +232,24 @@ function App() {
           <p>{currWinner}</p>
           <p>{currWinnerSymbol}</p>
         </div>
-        <div className="gameHistoryText">
-          <h3>Game History</h3>
-        </div>
-        <div className="gameContainer">
-          {currWinner !== "" && (
-            <div className="game">
-              {history.map((historyItem, index) => (
-                <div key={index} className="gameHistory">
-                  <p>{history.length - index}</p>
-                  <p>{historyItem.winner}</p>
-                  <p>{historyItem.symbol}</p>
-                </div>
-              ))}
+        {currWinner !== "" && (
+          <div className="">
+            <div className="gameHistoryText">
+              <h3>Game History</h3>
             </div>
-          )}
-        </div>
+            <div className="gameContainer">
+              <div className="game">
+                {history.map((historyItem, index) => (
+                  <div key={index} className="gameHistory">
+                    <p>{history.length - index}</p>
+                    <p>{historyItem.winner}</p>
+                    <p>{historyItem.symbol}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </>
   );

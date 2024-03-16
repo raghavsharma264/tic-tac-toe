@@ -227,11 +227,11 @@ function App() {
             <SquareButton value={square[8]} onClick={() => handleClick(8)} />
           </div>
         </div>
-        {currWinner !== "" && (
-          <div className="">
-            <div className="gameHistoryText">
-              <h3>Game History</h3>
-            </div>
+        <div className="">
+          <div className="gameHistoryText">
+            <h3>Game History</h3>
+          </div>
+          {currWinner !== "" && (
             <div className="gameContainer">
               <div className="game">
                 {history.map((historyItem, index) => (
@@ -243,8 +243,8 @@ function App() {
                 ))}
               </div>
             </div>
-          </div>
-        )}
+          )}
+        </div>
       </div>
     </>
   );

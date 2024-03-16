@@ -17,8 +17,12 @@ a {
 }
 
 .title {
-  border: 2px solid #9900ff;
-  border-radius: 10px;
+  background: linear-gradient(#160025, #160025), 
+              linear-gradient(to right, darkblue, darkorchid);
+  background-origin: padding-box, border-box;
+  background-repeat: no-repeat;
+  border: 5px solid transparent;
+  border-radius: 5px;
   padding: 10px;
 }
 

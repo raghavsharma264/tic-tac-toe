@@ -17,8 +17,8 @@ a {
 }
 
 .title {
-  background: linear-gradient(#160025, #160025), 
-              linear-gradient(to right, darkblue, darkorchid);
+  background: linear-gradient(#160025, #160025),
+    linear-gradient(to right, darkblue, darkorchid);
   background-origin: padding-box, border-box;
   background-repeat: no-repeat;
   border: 5px solid transparent;
@@ -124,9 +124,12 @@ a {
   font-size: 2rem;
   font-weight: 700;
   padding: 10px;
-  border: 2px solid #160025;
-  border-radius: 10px;
-  background: #160025;
+  background: linear-gradient(#160025, #160025),
+    linear-gradient(to right, darkblue, darkorchid);
+  background-origin: padding-box, border-box;
+  background-repeat: no-repeat;
+  border: 5px solid transparent;
+  border-radius: 5px;
   color: white;
 }
 
@@ -148,9 +151,12 @@ a {
 .pstatus {
   margin: 5px;
   padding: 10px;
-  border: 2px solid #160025;
-  border-radius: 10px;
-  background: #160025;
+  background: linear-gradient(#160025, #160025),
+    linear-gradient(to right, darkblue, darkorchid);
+  background-origin: padding-box, border-box;
+  background-repeat: no-repeat;
+  border: 5px solid transparent;
+  border-radius: 5px;
   color: white;
 }
 
@@ -181,8 +187,8 @@ a {
   margin-top: 10px;
   display: flex;
   justify-content: center;
-  background: linear-gradient(#160025, #160025), 
-              linear-gradient(to right, darkblue, darkorchid);
+  background: linear-gradient(#160025, #160025),
+    linear-gradient(to right, darkblue, darkorchid);
   background-origin: padding-box, border-box;
   background-repeat: no-repeat;
   border: 5px solid transparent;
@@ -192,6 +198,6 @@ a {
 
 .gameContainer {
   margin-top: 10px;
-  border: 3px solid #160025;
+  border: 4px solid #160025;
   border-radius: 10px;
 }

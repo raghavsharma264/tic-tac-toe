@@ -181,9 +181,12 @@ a {
   margin-top: 10px;
   display: flex;
   justify-content: center;
-  border: 2px solid #160025;
-  border-radius: 10px;
-  background: #160025;
+  background: linear-gradient(#160025, #160025), 
+              linear-gradient(to right, darkblue, darkorchid);
+  background-origin: padding-box, border-box;
+  background-repeat: no-repeat;
+  border: 5px solid transparent;
+  border-radius: 5px;
   color: white;
 }
 

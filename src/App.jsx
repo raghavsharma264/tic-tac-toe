@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import TextField from "@mui/material/TextField";
+import Button from "@mui/material/Button";
 
 import "./App.css";
 
@@ -82,9 +83,11 @@ function App() {
   }
 
   const winner = checkWinner(square);
+  // console.log(winner);
 
   // Shows all played games result history
   const newGameHistory = [...history, winner];
+  // console.log("new", newGameHistory);
 
   useEffect(() => {
     if (winner) {
@@ -106,6 +109,7 @@ function App() {
         setStatus(`Winner is ${user2Name}. Please restart the game.`);
       }
     } else if (square.every((item) => item !== "")) {
+      // Handle draw separately
       setGameHistory([{ winner: "Draw", symbol: "N/A" }, ...history]);
       setStatus(`It's a Draw! Please restart the game.`);
     } else {
@@ -121,6 +125,10 @@ function App() {
             Tic-Tac-Toe Game
           </a>
         </h1>
+        <div className="userAcc">
+          <Button variant="contained">Login</Button>
+          <Button variant="contained">Sign Up</Button>
+        </div>
       </div>
       <div className="mainContainer">
         <div className="userInput">

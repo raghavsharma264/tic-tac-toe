@@ -3,7 +3,7 @@ import Card from "@mui/material/Card";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 
-const Login = () => {
+function Login() {
   return (
     <>
       <div
@@ -14,7 +14,7 @@ const Login = () => {
           padding: 20,
         }}
       >
-        <Typography level="h4">Welcome back, Log in below.</Typography>
+        <Typography level="h4">Welcome back, Login below.</Typography>
       </div>
 
       <div
@@ -22,9 +22,37 @@ const Login = () => {
           display: "flex",
           justifyContent: "center",
         }}
-      ></div>
+      >
+        <Card variant="outlined" sx={{ maxWidth: 400 }}>
+          <div
+            style={{
+              width: 300,
+              padding: 30,
+            }}
+          >
+            <TextField
+              id="outlined-basic"
+              sx={{ width: 300 }}
+              label="Username or Email"
+              variant="outlined"
+            />
+            <br />
+            <br />
+            <TextField
+              type="password"
+              id="outlined-basic"
+              sx={{ width: 300 }}
+              label="Password"
+              variant="outlined"
+            />
+            <br />
+            <br />
+            <Button variant="contained">Login in</Button>
+          </div>
+        </Card>
+      </div>
     </>
   );
-};
+}
 
 export default Login;

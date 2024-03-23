@@ -12,7 +12,7 @@ function Signup() {
         }}
       >
         <Typography level="h4">
-          Welcome to Tic Yac Toe. Sign up below.
+          Welcome to CodeCourse. Sign up below.
         </Typography>
       </div>
 
@@ -21,7 +21,53 @@ function Signup() {
           display: "flex",
           justifyContent: "center",
         }}
-      ></div>
+      >
+        <Card variant="outlined" sx={{ maxWidth: 400 }}>
+          <div
+            style={{
+              width: 300,
+              padding: 30,
+            }}
+          >
+            <TextField
+              id="outlined-basic"
+              sx={{ width: 300 }}
+              label="Username"
+              variant="outlined"
+            />
+            <br />
+            <br />
+            <TextField
+              type="email"
+              id="outlined-basic"
+              sx={{ width: 300 }}
+              label="Email"
+              variant="outlined"
+            />
+            <br />
+            <br />
+            <TextField
+              type="password"
+              id="outlined-basic"
+              sx={{ width: 300 }}
+              label="Password"
+              variant="outlined"
+            />
+            <br />
+            <br />
+            <TextField
+              type="password"
+              id="outlined-basic"
+              sx={{ width: 300 }}
+              label="Confirm Password"
+              variant="outlined"
+            />
+            <br />
+            <br />
+            <Button variant="contained">Sign up</Button>
+          </div>
+        </Card>
+      </div>
     </>
   );
 }

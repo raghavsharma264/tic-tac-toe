@@ -23,7 +23,15 @@ function Home() {
   const [user1Input, setUser1Input] = useState("X");
   const [user2Input, setUser2Input] = useState("O");
 
+  const [currWinner, setCurrWinner] = useState("");
+  const [currWinnerSymbol, setCurrWinnerSymbol] = useState("");
+  const [history, setGameHistory] = useState([]);
 
+  let userWinnerHistory;
+
+  const handleInputChangeName1 = (name1) => {
+    setUser1Name(name1.target.value);
+  };
 
   return (
     <>

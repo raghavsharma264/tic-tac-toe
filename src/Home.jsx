@@ -32,6 +32,17 @@ function Home() {
   const handleInputChangeName1 = (name1) => {
     setUser1Name(name1.target.value);
   };
+  const handleInputChangeName2 = (name2) => {
+    setUser2Name(name2.target.value);
+  };
+
+  const handleInputChange1 = (event1) => {
+    setUser1Input(event1.target.value);
+  };
+  const handleInputChange2 = (event2) => {
+    setUser2Input(event2.target.value);
+  };
+
 
   return (
     <>

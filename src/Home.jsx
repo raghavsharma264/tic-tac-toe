@@ -56,7 +56,27 @@ function Home() {
           <Button variant="contained">Sign Up</Button>
         </div>
       </div>
-        
+      <div className="mainContainer">
+        <div className="userInput">
+          <div className="user1">
+            <TextField
+              id="outlined-helperText"
+              label="Player 1 username"
+              defaultValue="Default Value"
+              value={user1Name}
+              onChange={handleInputChangeName1}
+            />
+            <TextField
+              id="outlined-helperText"
+              label="Player 1 Symbol"
+              defaultValue="Default Value"
+              value={user1Input}
+              onChange={handleInputChange1}
+              sx={{ width: "40%", marginLeft: "10px" }}
+            />
+          </div>
+          </div>
+        </div>
     </>
   );
 }

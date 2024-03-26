@@ -43,10 +43,20 @@ function Home() {
     setUser2Input(event2.target.value);
   };
 
-
   return (
     <>
-      
+      <div className="header">
+        <h1>
+          <a href="" className="title">
+            Tic-Tac-Toe Game
+          </a>
+        </h1>
+        <div className="userAcc">
+          <Button variant="contained">Login</Button>
+          <Button variant="contained">Sign Up</Button>
+        </div>
+      </div>
+        
     </>
   );
 }

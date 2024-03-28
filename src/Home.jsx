@@ -98,7 +98,12 @@ function Home() {
             />
           </div>
         </div>
-        
+        <div className="status">
+          <p className="pst">{status}</p>
+        </div>
+        <div className="score">
+          
+        </div>
       </div>
     </>
   );

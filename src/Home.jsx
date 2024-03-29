@@ -117,6 +117,13 @@ function Home() {
           </div>
           <div className="row">
             <SquareButton value={square[3]} onClick={() => handleClick(3)} />
+            <SquareButton value={square[4]} onClick={() => handleClick(4)} />
+            <SquareButton value={square[5]} onClick={() => handleClick(5)} />
+          </div>
+          <div className="row">
+            <SquareButton value={square[6]} onClick={() => handleClick(6)} />
+            <SquareButton value={square[7]} onClick={() => handleClick(7)} />
+            <SquareButton value={square[8]} onClick={() => handleClick(8)} />
           </div>
         </div>
       </div>

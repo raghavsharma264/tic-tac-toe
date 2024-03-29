@@ -109,6 +109,16 @@ function Home() {
             {user2Name} score: {user2Score}
           </p>
         </div>
+        <div className="container">
+          <div className="row">
+            <SquareButton value={square[0]} onClick={() => handleClick(0)} />
+            <SquareButton value={square[1]} onClick={() => handleClick(1)} />
+            <SquareButton value={square[2]} onClick={() => handleClick(2)} />
+          </div>
+          <div className="row">
+            <SquareButton value={square[3]} onClick={() => handleClick(3)} />
+          </div>
+        </div>
       </div>
     </>
   );

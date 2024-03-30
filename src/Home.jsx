@@ -126,6 +126,11 @@ function Home() {
             <SquareButton value={square[8]} onClick={() => handleClick(8)} />
           </div>
         </div>
+        <div className="">
+          <div className="gameHistoryText">
+            <h3>Game History</h3>
+          </div>
+        </div>
       </div>
     </>
   );

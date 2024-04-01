@@ -83,11 +83,19 @@ function Home() {
   }
 
   const winner = checkWinner(square);
-  console.log(winner);
+  // console.log(winner);
 
   // Shows all played games result history
   const newGameHistory = [...history, winner];
   // console.log("new", newGameHistory);
+
+  useEffect(() => {
+    if (winner) {
+      const winnerName = winner === user1Input ? user1Name : user2Name;
+      const winnerSymbol = winner === user1Input ? user1Input : user2Input;
+
+    }
+  }, [square, user1Turn]);
 
   return (
     <>

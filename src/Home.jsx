@@ -76,7 +76,15 @@ function Home() {
     setUser1Turn(!user1Turn);
     setSquare(copyOfSquare);
   }
-  
+
+  function handleRestart() {
+    setUser1Turn(true);
+    setSquare(Array(9).fill(""));
+  }
+
+  const winner = checkWinner(square);
+  // console.log(winner);
+
   return (
     <>
       <div className="header">

@@ -43,6 +43,7 @@ function Home() {
     setUser2Input(event2.target.value);
   };
 
+  // Function for checking winners
   function checkWinner(square) {
     const winnerValue = [
       [0, 1, 2],
@@ -69,6 +70,7 @@ function Home() {
     return null;
   }
 
+  // Function for handling click & user turns
   function handleClick(getCurrentSquare) {
     let copyOfSquare = [...square];
     if (checkWinner(copyOfSquare) || copyOfSquare[getCurrentSquare]) return;
@@ -83,11 +85,11 @@ function Home() {
   }
 
   const winner = checkWinner(square);
-  // console.log(winner);
+  console.log(winner);
 
   // Shows all played games result history
   const newGameHistory = [...history, winner];
-  // console.log("new", newGameHistory);
+  console.log("new", newGameHistory);
 
   useEffect(() => {
     if (winner) {

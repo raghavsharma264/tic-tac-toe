@@ -101,7 +101,11 @@ function Home() {
         ...history,
       ]);
       setCurrWinner(winnerName);
-      
+      setCurrWinnerSymbol(winnerSymbol);
+
+      if (winner === user1Input) {
+        
+      }
     }
     }
   }, [square, user1Turn]);

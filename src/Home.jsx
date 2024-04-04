@@ -104,9 +104,10 @@ function Home() {
       setCurrWinnerSymbol(winnerSymbol);
 
       if (winner === user1Input) {
-        
+        setUser1Score(user1Score + 1);
+        setStatus(`Winner is ${user1Name}. Please restart the game.`);
       }
-    }
+    
     }
   }, [square, user1Turn]);
 

@@ -106,6 +106,9 @@ function Home() {
       if (winner === user1Input) {
         setUser1Score(user1Score + 1);
         setStatus(`Winner is ${user1Name}. Please restart the game.`);
+      } else if (winner === user2Input) {
+        setUser2Score(user2Score + 1);
+        setStatus(`Winner is ${user2Name}. Please restart the game.`);
       }
     
     }

@@ -110,7 +110,10 @@ function Home() {
         setUser2Score(user2Score + 1);
         setStatus(`Winner is ${user2Name}. Please restart the game.`);
       }
-    
+    } else if (square.every((item) => item !== "")) {
+      setGameHistory([{ winner: "Draw", symbol: "N/A" }, ...history]);
+      setStatus(`It's a Draw! Please restart the game.`);
+    }
     }
   }, [square, user1Turn]);
 

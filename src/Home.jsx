@@ -207,7 +207,9 @@ function Home() {
             <h3>Game History</h3>
           </div>
           <div className="gameHistoryText winnerInfo">
-            
+            <h3>Game No.</h3>
+            <h3>Player Name</h3>
+            <h3>Player Symbol</h3>
           </div>
           {currWinner !== "" && (
             <div className="gameContainer">

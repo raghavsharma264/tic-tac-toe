@@ -212,7 +212,10 @@ a {
 
 .gameContainer {
   margin-top: 10px;
-  background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)),
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.6),
+      rgba(255, 255, 255, 0.6)
+    ),
     linear-gradient(to left, rgba(0, 0, 139, 0.8), rgba(153, 50, 204, 0.8));
   background-origin: padding-box, border-box;
   background-repeat: no-repeat;

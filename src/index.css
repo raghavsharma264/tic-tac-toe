@@ -205,6 +205,11 @@ a {
   color: white;
 }
 
+.winnerInfo {
+  display: flex;
+  justify-content: space-around;
+}
+
 .gameContainer {
   margin-top: 10px;
   background: linear-gradient(

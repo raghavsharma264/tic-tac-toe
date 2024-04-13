@@ -11,6 +11,13 @@ function Login() {
     setUsernameOrEmail(event.target.value);
   };
 
+  const handlePasswordChange = (event) => {
+    setPassword(event.target.value);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log("Form submitted", { usernameOrEmail, password });
   };
 
 function Login() {

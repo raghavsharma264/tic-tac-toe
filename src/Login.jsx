@@ -56,6 +56,8 @@ function Login() {
                 value={usernameOrEmail}
                 onChange={handleUsernameOrEmailChange}
               />
+              <br />
+              <br />
               <TextField
                 type="password"
                 id="password"
@@ -65,6 +67,11 @@ function Login() {
                 value={password}
                 onChange={handlePasswordChange}
               />
+              <br />
+              <br />
+              <Button type="submit" variant="contained" color="primary">
+                Login
+              </Button>
             </div>
           </form>
         </Card>

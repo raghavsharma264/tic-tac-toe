@@ -1,6 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
+import { Typography, Card, TextField, Button } from "@mui/material";
 
 function Signup() {
+  const [formData, setFormData] = useState({
+    username: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
+  });
+  };
+
   return (
     <>
       <div
@@ -11,7 +20,7 @@ function Signup() {
           padding: 20,
         }}
       >
-        <Typography level="h4">
+        <Typography variant="h4">
           Welcome to CodeCourse. Sign up below.
         </Typography>
       </div>
@@ -22,51 +31,6 @@ function Signup() {
           justifyContent: "center",
         }}
       >
-        <Card variant="outlined" sx={{ maxWidth: 400 }}>
-          <div
-            style={{
-              width: 300,
-              padding: 30,
-            }}
-          >
-            <TextField
-              id="outlined-basic"
-              sx={{ width: 300 }}
-              label="Username"
-              variant="outlined"
-            />
-            <br />
-            <br />
-            <TextField
-              type="email"
-              id="outlined-basic"
-              sx={{ width: 300 }}
-              label="Email"
-              variant="outlined"
-            />
-            <br />
-            <br />
-            <TextField
-              type="password"
-              id="outlined-basic"
-              sx={{ width: 300 }}
-              label="Password"
-              variant="outlined"
-            />
-            <br />
-            <br />
-            <TextField
-              type="password"
-              id="outlined-basic"
-              sx={{ width: 300 }}
-              label="Confirm Password"
-              variant="outlined"
-            />
-            <br />
-            <br />
-            <Button variant="contained">Sign up</Button>
-          </div>
-        </Card>
       </div>
     </>
   );

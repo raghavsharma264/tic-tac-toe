@@ -17,29 +17,13 @@ function Signup() {
       [name]: value,
     });
   };
-  };
 
   return (
     <>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          paddingTop: 100,
-          padding: 20,
-        }}
-      >
+      <div>
         <Typography variant="h4">
           Welcome to CodeCourse. Sign up below.
         </Typography>
-      </div>
-
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-        }}
-      >
       </div>
     </>
   );

@@ -36,6 +36,18 @@ function Signup() {
             value={formData.username}
             onChange={handleChange}
           />
+          <br />
+          <br />
+          <TextField
+            type="email"
+            id="email"
+            sx={{ width: 300 }}
+            label="Email"
+            variant="outlined"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+          />
         </div>
       </Card>
     </>

@@ -60,6 +60,8 @@ function Signup() {
             value={formData.password}
             onChange={handleChange}
           />
+          <br />
+          <br />
           <TextField
             type="password"
             id="confirmPassword"
@@ -70,6 +72,9 @@ function Signup() {
             value={formData.confirmPassword}
             onChange={handleChange}
           />
+          <br />
+          <br />
+          <Button variant="contained">Sign up</Button>
         </div>
       </Card>
     </>

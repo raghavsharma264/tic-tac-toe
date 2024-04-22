@@ -4,6 +4,13 @@ import Button from "@mui/material/Button";
 
 import "./App.css";
 
+function SquareButton({ value, onClick }) {
+  return (
+    <button onClick={onClick} className="squareButton">
+      {value}
+    </button>
+  );
+}
 
 function App() {
 

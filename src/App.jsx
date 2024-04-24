@@ -23,7 +23,12 @@ function App() {
   const [user1Input, setUser1Input] = useState("X");
   const [user2Input, setUser2Input] = useState("O");
 
-
+  const handleInputChangeName1 = (name1) => {
+    setUser1Name(name1.target.value);
+  };
+  const handleInputChangeName2 = (name2) => {
+    setUser2Name(name2.target.value);
+  };
 
   return (
     <>

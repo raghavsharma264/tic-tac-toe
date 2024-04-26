@@ -58,6 +58,13 @@ function App() {
     for (let i = 0; i < winnerValue.length; i++) {
       const [value1, value2, value3] = winnerValue[i];
 
+      if (
+        square[value1] &&
+        square[value1] === square[value2] &&
+        square[value1] === square[value3]
+      ) {
+        return square[value1];
+      }
     }
     return null;
   }

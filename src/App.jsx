@@ -55,6 +55,13 @@ function App() {
       [1, 4, 7],
     ];
 
+    for (let i = 0; i < winnerValue.length; i++) {
+      const [value1, value2, value3] = winnerValue[i];
+
+    }
+    return null;
+  }
+
   return (
     <>
     </>

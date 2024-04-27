@@ -77,6 +77,10 @@ function App() {
     setSquare(copyOfSquare);
   }
 
+  function handleRestart() {
+    setUser1Turn(true);
+    setSquare(Array(9).fill(""));
+  }
   return (
     <>
     </>

@@ -69,6 +69,14 @@ function App() {
     return null;
   }
 
+  function handleClick(getCurrentSquare) {
+    let copyOfSquare = [...square];
+    if (checkWinner(copyOfSquare) || copyOfSquare[getCurrentSquare]) return;
+    copyOfSquare[getCurrentSquare] = user1Turn ? user1Input : user2Input;
+    setUser1Turn(!user1Turn);
+    setSquare(copyOfSquare);
+  }
+
   return (
     <>
     </>

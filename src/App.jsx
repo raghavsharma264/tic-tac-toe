@@ -85,6 +85,10 @@ function App() {
   const winner = checkWinner(square);
   // console.log(winner);
 
+  // Shows all played games result history
+  const newGameHistory = [...history, winner];
+  // console.log("new", newGameHistory);
+
   return (
     <>
     </>

@@ -81,6 +81,10 @@ function App() {
     setUser1Turn(true);
     setSquare(Array(9).fill(""));
   }
+
+  const winner = checkWinner(square);
+  // console.log(winner);
+
   return (
     <>
     </>

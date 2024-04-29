@@ -94,6 +94,10 @@ function App() {
       const winnerName = winner === user1Input ? user1Name : user2Name;
       const winnerSymbol = winner === user1Input ? user1Input : user2Input;
 
+      setGameHistory([
+        { winner: winnerName, symbol: winnerSymbol },
+        ...history,
+      ]);
     }
   }, [square, user1Turn]);
 

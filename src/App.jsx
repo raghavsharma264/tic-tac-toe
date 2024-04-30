@@ -98,7 +98,9 @@ function App() {
         { winner: winnerName, symbol: winnerSymbol },
         ...history,
       ]);
-      
+      setCurrWinner(winnerName);
+      setCurrWinnerSymbol(winnerSymbol);
+
     }
   }, [square, user1Turn]);
 

@@ -83,11 +83,11 @@ function App() {
   }
 
   const winner = checkWinner(square);
-  console.log(winner);
+  // console.log(winner);
 
   // Shows all played games result history
   const newGameHistory = [...history, winner];
-  console.log("new", newGameHistory);
+  // console.log("new", newGameHistory);
 
   useEffect(() => {
     if (winner) {
@@ -104,8 +104,10 @@ function App() {
       if (winner === user1Input) {
         setUser1Score(user1Score + 1);
         setStatus(`Winner is ${user1Name}. Please restart the game.`);
+      } else if (winner === user2Input) {
+        setUser2Score(user2Score + 1);
+        setStatus(`Winner is ${user2Name}. Please restart the game.`);
       }
-      
     }
   }, [square, user1Turn]);
 

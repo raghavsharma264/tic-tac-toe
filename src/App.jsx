@@ -109,8 +109,11 @@ function App() {
         setStatus(`Winner is ${user2Name}. Please restart the game.`);
       }
     } else if (square.every((item) => item !== "")) {
+      // Handle draw separately
       setGameHistory([{ winner: "Draw", symbol: "N/A" }, ...history]);
       setStatus(`It's a Draw! Please restart the game.`);
+    } else {
+      setStatus(`Next player is ${user1Turn ? user1Name : user2Name}`);
     }
   }, [square, user1Turn]);
 

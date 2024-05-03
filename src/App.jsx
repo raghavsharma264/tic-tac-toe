@@ -91,7 +91,11 @@ function App() {
 
   function Login() {
     const [usernameOrEmail, setUsernameOrEmail] = useState("");
+    const [password, setPassword] = useState("");
 
+    const handleUsernameOrEmailChange = (event) => {
+      setUsernameOrEmail(event.target.value);
+    };
 
   }
 

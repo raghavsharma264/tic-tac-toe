@@ -89,6 +89,12 @@ function App() {
   const newGameHistory = [...history, winner];
   // console.log("new", newGameHistory);
 
+  function Login() {
+    const [usernameOrEmail, setUsernameOrEmail] = useState("");
+
+
+  }
+
   useEffect(() => {
     if (winner) {
       const winnerName = winner === user1Input ? user1Name : user2Name;

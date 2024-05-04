@@ -101,6 +101,10 @@ function App() {
       setPassword(event.target.value);
     };
 
+    const handleSubmit = (event) => {
+      event.preventDefault();
+      console.log("Form submitted", { usernameOrEmail, password });
+    };
   }
 
   useEffect(() => {

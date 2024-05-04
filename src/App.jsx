@@ -97,6 +97,10 @@ function App() {
       setUsernameOrEmail(event.target.value);
     };
 
+    const handlePasswordChange = (event) => {
+      setPassword(event.target.value);
+    };
+
   }
 
   useEffect(() => {

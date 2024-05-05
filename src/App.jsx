@@ -107,6 +107,16 @@ function App() {
     };
   }
 
+  function Signup() {
+    const [formData, setFormData] = useState({
+      username: "",
+      email: "",
+      password: "",
+      confirmPassword: "",
+    });
+
+  }
+
   useEffect(() => {
     if (winner) {
       const winnerName = winner === user1Input ? user1Name : user2Name;

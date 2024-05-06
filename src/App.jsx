@@ -155,6 +155,17 @@ function App() {
 
   return (
     <>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          paddingTop: 100,
+          padding: 20,
+        }}
+      >
+        
+      </div>
+      
     </>
   );
 }

@@ -189,6 +189,15 @@ function App() {
                 value={usernameOrEmail}
                 onChange={handleUsernameOrEmailChange}
               />
+              <TextField
+                type="password"
+                id="password"
+                sx={{ width: 300 }}
+                label="Password"
+                variant="outlined"
+                value={password}
+                onChange={handlePasswordChange}
+              />
             </div>
           </form>
         </Card>

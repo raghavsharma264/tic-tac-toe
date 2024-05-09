@@ -215,6 +215,17 @@ function App() {
           Welcome to CodeCourse. Sign up below.
         </Typography>
       </div>
+      <Card variant="outlined" sx={{ maxWidth: 400 }}>
+        <div style={{ width: 300, padding: 30 }}>
+          <TextField
+            id="username"
+            sx={{ width: 300 }}
+            label="Username"
+            variant="outlined"
+          />
+        </div>
+      </Card>
+
     </>
   );
 }

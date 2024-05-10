@@ -227,6 +227,13 @@ function App() {
             onChange={handleChange}
           />
           <br />
+          <br />
+          <TextField
+            type="email"
+            id="email"
+            sx={{ width: 300 }}
+            variant="outlined"
+          />
         </div>
       </Card>
 

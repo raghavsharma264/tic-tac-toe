@@ -232,7 +232,11 @@ function App() {
             type="email"
             id="email"
             sx={{ width: 300 }}
+            label="Email"
             variant="outlined"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
           />
         </div>
       </Card>

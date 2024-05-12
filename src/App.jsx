@@ -238,13 +238,19 @@ function App() {
             value={formData.email}
             onChange={handleChange}
           />
+          <br />
+          <br />
           <TextField
             type="password"
             id="password"
             sx={{ width: 300 }}
             label="Password"
             variant="outlined"
+            name="password"
+            value={formData.password}
+            onChange={handleChange}
           />
+          
         </div>
       </Card>
 

@@ -250,7 +250,14 @@ function App() {
             value={formData.password}
             onChange={handleChange}
           />
-          
+          <br />
+          <br />
+          <TextField
+            type="password"
+            id="confirmPassword"
+            sx={{ width: 300 }}
+            variant="outlined"
+          />
         </div>
       </Card>
 

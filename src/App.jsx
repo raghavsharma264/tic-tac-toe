@@ -260,7 +260,11 @@ function App() {
             variant="outlined"
             name="confirmPassword"
             value={formData.confirmPassword}
+            onChange={handleChange}
           />
+          <br />
+          <br />
+          <Button variant="contained">Sign up</Button>
         </div>
       </Card>
 

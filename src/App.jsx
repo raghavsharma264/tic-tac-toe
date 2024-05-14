@@ -256,7 +256,10 @@ function App() {
             type="password"
             id="confirmPassword"
             sx={{ width: 300 }}
+            label="Confirm Password"
             variant="outlined"
+            name="confirmPassword"
+            value={formData.confirmPassword}
           />
         </div>
       </Card>

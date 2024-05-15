@@ -155,6 +155,13 @@ function App() {
 
   return (
     <>
+      <div className="header">
+        <h1>
+          <a href="" className="title">
+            Tic-Tac-Toe Game
+          </a>
+        </h1>
+      </div>
 
       <div
         style={{

@@ -168,7 +168,12 @@ function App() {
       </div>
       <div className="mainContainer">
         <div className="userInput">
-          
+          <div className="user1">
+            <TextField
+              id="outlined-helperText"
+              label="Player 1 username"
+              defaultValue="Default Value"
+            />
             </div>
       </div>
 

@@ -166,6 +166,11 @@ function App() {
           <Button variant="contained">Sign Up</Button>
         </div>
       </div>
+      <div className="mainContainer">
+        <div className="userInput">
+          
+            </div>
+      </div>
 
       <div
         style={{

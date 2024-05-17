@@ -173,7 +173,10 @@ function App() {
               id="outlined-helperText"
               label="Player 1 username"
               defaultValue="Default Value"
+              value={user1Name}
+              onChange={handleInputChangeName1}
             />
+            
             </div>
       </div>
 

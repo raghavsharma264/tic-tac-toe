@@ -176,7 +176,12 @@ function App() {
               value={user1Name}
               onChange={handleInputChangeName1}
             />
-            
+            <TextField
+              id="outlined-helperText"
+              label="Player 1 Symbol"
+              defaultValue="Default Value"
+              
+            />
             </div>
       </div>
 

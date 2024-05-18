@@ -185,6 +185,11 @@ function App() {
               sx={{ width: "40%", marginLeft: "10px" }}
             />
           </div>
+          <div className="restart">
+            <button className="button" onClick={handleRestart}>
+              Restart
+            </button>
+          </div>
           </div>
       </div>
 

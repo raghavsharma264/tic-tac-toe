@@ -180,9 +180,12 @@ function App() {
               id="outlined-helperText"
               label="Player 1 Symbol"
               defaultValue="Default Value"
-              
+              value={user1Input}
+              onChange={handleInputChange1}
+              sx={{ width: "40%", marginLeft: "10px" }}
             />
-            </div>
+          </div>
+          </div>
       </div>
 
       <div

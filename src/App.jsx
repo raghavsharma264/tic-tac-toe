@@ -191,7 +191,13 @@ function App() {
             </button>
           </div>
           <div className="user2">
-            
+            <TextField
+              id="outlined-helperText"
+              label="Player 2 Username"
+              defaultValue="Default Value"
+              value={user2Name}
+              onChange={handleInputChangeName2}
+            />
           </div>
         </div>
         <div className="status">

@@ -198,6 +198,11 @@ function App() {
               value={user2Name}
               onChange={handleInputChangeName2}
             />
+            <TextField
+              id="outlined-helperText"
+              label="Player 2 Symbol"
+              
+            />
           </div>
         </div>
         <div className="status">

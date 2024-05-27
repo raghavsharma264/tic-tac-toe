@@ -208,17 +208,6 @@ function App() {
             />
           </div>
         </div>
-        <div className="status">
-          <p className="pst">{status}</p>
-        </div>
-        <div className="score">
-          <p className="pstatus">
-            {user1Name} score: {user1Score}
-          </p>
-          <p className="pstatus">
-            {user2Name} score: {user2Score}
-          </p>
-        </div>
       </div>
 
       <div

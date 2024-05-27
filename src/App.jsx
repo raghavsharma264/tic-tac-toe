@@ -208,6 +208,9 @@ function App() {
             />
           </div>
         </div>
+        <div className="status">
+          <p className="pst">{status}</p>
+        </div>
       </div>
 
       <div

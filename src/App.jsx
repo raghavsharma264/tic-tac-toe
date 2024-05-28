@@ -211,6 +211,10 @@ function App() {
         <div className="status">
           <p className="pst">{status}</p>
         </div>
+        <div className="score">
+          <p className="pstatus">
+          </p>
+        </div>
       </div>
 
       <div

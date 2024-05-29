@@ -219,6 +219,11 @@ function App() {
             {user2Name} score: {user2Score}
           </p>
         </div>
+        <div className="container">
+          <div className="row">
+            
+          </div>
+        </div>
       </div>
 
       <div

@@ -237,9 +237,9 @@ function App() {
           </div>
         </div>
         <div className="">
-          
-          
-          
+          <div className="gameHistoryText">
+            <h3>Game History</h3>
+          </div>
         </div>
       </div>
 

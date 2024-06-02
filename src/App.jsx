@@ -190,55 +190,13 @@ function App() {
               Restart
             </button>
           </div>
-          <div className="user2">
-            <TextField
-              id="outlined-helperText"
-              label="Player 2 Username"
-              defaultValue="Default Value"
-              value={user2Name}
-              onChange={handleInputChangeName2}
-            />
-            <TextField
-              id="outlined-helperText"
-              label="Player 2 Symbol"
-              defaultValue="Default Value"
-              value={user2Input}
-              onChange={handleInputChange2}
-              sx={{ width: "40%", marginLeft: "10px" }}
-            />
-          </div>
-        </div>
-        <div className="status">
-          <p className="pst">{status}</p>
-        </div>
-        <div className="score">
-          <p className="pstatus">
-            {user1Name} score: {user1Score}
-          </p>
-          <p className="pstatus">
-            {user2Name} score: {user2Score}
-          </p>
-        </div>
-        <div className="container">
-          <div className="row">
-            <SquareButton value={square[0]} onClick={() => handleClick(0)} />
-            <SquareButton value={square[1]} onClick={() => handleClick(1)} />
-            <SquareButton value={square[2]} onClick={() => handleClick(2)} />
-          </div>
-          <div className="row">
-            <SquareButton value={square[3]} onClick={() => handleClick(3)} />
-            <SquareButton value={square[4]} onClick={() => handleClick(4)} />
-            <SquareButton value={square[5]} onClick={() => handleClick(5)} />
-          </div>
-          <div className="row">
-            <SquareButton value={square[6]} onClick={() => handleClick(6)} />
-            <SquareButton value={square[7]} onClick={() => handleClick(7)} />
-            <SquareButton value={square[8]} onClick={() => handleClick(8)} />
-          </div>
         </div>
         <div className="">
           <div className="gameHistoryText">
             <h3>Game History</h3>
+          </div>
+          <div className="gameHistoryText winnerInfo">
+            
           </div>
         </div>
       </div>

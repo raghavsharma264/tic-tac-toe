@@ -190,6 +190,12 @@ function App() {
               Restart
             </button>
           </div>
+          <div className="user2">
+            <TextField
+              id="outlined-helperText"
+              
+            />
+          </div>
         </div>
         <div className="">
           <div className="gameHistoryText">

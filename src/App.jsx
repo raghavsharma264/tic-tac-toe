@@ -212,8 +212,9 @@ function App() {
           <p className="pst">{status}</p>
         </div>
         <div className="score">
-          
-          
+          <p className="pstatus">
+            {user1Name} score: {user1Score}
+          </p>
         </div>
         <div className="">
           <div className="gameHistoryText">

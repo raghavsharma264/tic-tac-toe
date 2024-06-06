@@ -215,6 +215,9 @@ function App() {
           <p className="pstatus">
             {user1Name} score: {user1Score}
           </p>
+          <p className="pstatus">
+            {user2Name} score: {user2Score}
+          </p>
         </div>
         <div className="">
           <div className="gameHistoryText">

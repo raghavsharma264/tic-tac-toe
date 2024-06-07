@@ -221,8 +221,9 @@ function App() {
         </div>
         <div className="container">
           <div className="row">
-            
-            
+            <SquareButton value={square[0]} onClick={() => handleClick(0)} />
+            <SquareButton value={square[1]} onClick={() => handleClick(1)} />
+            <SquareButton value={square[2]} onClick={() => handleClick(2)} />
           </div>
         </div>
         <div className="">

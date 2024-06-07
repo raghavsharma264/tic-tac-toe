@@ -219,6 +219,12 @@ function App() {
             {user2Name} score: {user2Score}
           </p>
         </div>
+        <div className="container">
+          <div className="row">
+            
+            
+          </div>
+        </div>
         <div className="">
           <div className="gameHistoryText">
             <h3>Game History</h3>
@@ -342,7 +348,6 @@ function App() {
           <Button variant="contained">Sign up</Button>
         </div>
       </Card>
-
     </>
   );
 }

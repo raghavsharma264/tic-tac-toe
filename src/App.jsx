@@ -225,6 +225,10 @@ function App() {
             <SquareButton value={square[1]} onClick={() => handleClick(1)} />
             <SquareButton value={square[2]} onClick={() => handleClick(2)} />
           </div>
+          <div className="row">
+            
+            
+          </div>
         </div>
         <div className="">
           <div className="gameHistoryText">

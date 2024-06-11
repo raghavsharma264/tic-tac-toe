@@ -247,6 +247,10 @@ function App() {
           </div>
         </div>
       </div>
+      {currWinner !== "" && (
+        
+        
+      )}
 
       <div
         style={{

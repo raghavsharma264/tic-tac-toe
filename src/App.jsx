@@ -248,8 +248,10 @@ function App() {
         </div>
       </div>
       {currWinner !== "" && (
-        
-        
+        <div className="gameContainer">
+          
+          
+        </div>
       )}
 
       <div

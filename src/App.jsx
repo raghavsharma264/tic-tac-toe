@@ -250,9 +250,10 @@ function App() {
       {currWinner !== "" && (
         <div className="gameContainer">
           <div className="game">
-            
-            
-            
+            {history.map((historyItem, index) => (
+              
+              
+            ))}
           </div>
         </div>
       )}

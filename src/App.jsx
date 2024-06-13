@@ -251,8 +251,11 @@ function App() {
         <div className="gameContainer">
           <div className="game">
             {history.map((historyItem, index) => (
-              
-              
+              <div key={index} className="gameHistory">
+                
+                
+                
+              </div>
             ))}
           </div>
         </div>

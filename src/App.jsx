@@ -261,7 +261,15 @@ function App() {
         </div>
       )}
 
-      
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          paddingTop: 100,
+          padding: 20,
+        }}
+      >
+      </div>
 
       <div>
         <Typography variant="h4">

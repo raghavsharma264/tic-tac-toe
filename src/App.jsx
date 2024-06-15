@@ -272,6 +272,13 @@ function App() {
         <Typography variant="h4">Welcome back, Login below.</Typography>
       </div>
 
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+      </div>
 
       <div>
         <Typography variant="h4">

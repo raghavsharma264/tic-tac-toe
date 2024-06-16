@@ -278,6 +278,11 @@ function App() {
           justifyContent: "center",
         }}
       >
+        <Card variant="outlined" sx={{ maxWidth: 400 }}>
+          
+          
+          
+        </Card>
       </div>
 
       <div>

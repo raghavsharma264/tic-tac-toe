@@ -289,7 +289,10 @@ function App() {
               <TextField
                 id="username-email"
                 sx={{ width: 300 }}
-                
+                label="Username or Email"
+                variant="outlined"
+                value={usernameOrEmail}
+                onChange={handleUsernameOrEmailChange}
               />
             </div>
           </form>

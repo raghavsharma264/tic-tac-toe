@@ -286,6 +286,11 @@ function App() {
                 padding: 30,
               }}
             >
+              <TextField
+                id="username-email"
+                sx={{ width: 300 }}
+                
+              />
             </div>
           </form>
         </Card>

@@ -294,6 +294,12 @@ function App() {
                 value={usernameOrEmail}
                 onChange={handleUsernameOrEmailChange}
               />
+              <br />
+              <br />
+              <TextField
+                type="password"
+                id="password"
+              />
             </div>
           </form>
         </Card>

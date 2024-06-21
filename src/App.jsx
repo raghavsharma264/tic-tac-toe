@@ -316,9 +316,9 @@ function App() {
       </div>
 
       <div>
-        
-
-        
+        <Typography variant="h4">
+          Welcome to CodeCourse. Sign up below.
+        </Typography>
       </div>
     </>
   );

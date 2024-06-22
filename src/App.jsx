@@ -321,11 +321,13 @@ function App() {
         </Typography>
       </div>
       <Card variant="outlined" sx={{ maxWidth: 400 }}>
-        
-        
+        <div style={{ width: 300, padding: 30 }}>
+          
+          
 
 
-        
+          
+        </div>
       </Card>
     </>
   );

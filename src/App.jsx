@@ -325,8 +325,11 @@ function App() {
           <TextField
             id="username"
             sx={{ width: 300 }}
-            
-            
+            label="Username"
+            variant="outlined"
+            name="username"
+            value={formData.username}
+            onChange={handleChange}
           />
         </div>
       </Card>

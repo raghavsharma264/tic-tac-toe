@@ -334,8 +334,10 @@ function App() {
           <br />
           <br />
           <TextField
-          
-          
+            type="email"
+            id="email"
+            
+            
           />
         </div>
       </Card>

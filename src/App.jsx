@@ -345,9 +345,11 @@ function App() {
           />
           <br />
           <br />
-          
-
-          
+          <TextField
+            type="password"
+            id="password"
+            sx={{ width: 300 }}
+          />
         </div>
       </Card>
     </>

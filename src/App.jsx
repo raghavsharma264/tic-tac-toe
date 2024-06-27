@@ -349,6 +349,10 @@ function App() {
             type="password"
             id="password"
             sx={{ width: 300 }}
+            label="Password"
+            variant="outlined"
+            
+            
           />
         </div>
       </Card>

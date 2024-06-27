@@ -351,7 +351,10 @@ function App() {
             sx={{ width: 300 }}
             label="Password"
             variant="outlined"
-            
+            name="password"
+            value={formData.password}
+            onChange={handleChange}
+
             
           />
         </div>

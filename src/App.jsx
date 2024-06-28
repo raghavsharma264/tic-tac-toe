@@ -354,9 +354,12 @@ function App() {
             name="password"
             value={formData.password}
             onChange={handleChange}
-
-            
           />
+          <br />
+          <br />
+          
+
+          
         </div>
       </Card>
     </>

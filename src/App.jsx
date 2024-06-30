@@ -321,8 +321,8 @@ function App() {
             label="Confirm Password"
             variant="outlined"
             name="confirmPassword"
-            
-            
+            value={formData.confirmPassword}
+            onChange={handleChange}
           />
         </div>
       </Card>

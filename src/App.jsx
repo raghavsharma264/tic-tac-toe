@@ -326,7 +326,10 @@ function App() {
           />
           <br />
           <br />
-          
+          <Button variant="contained">Sign up</Button>
+
+
+
 
           
         </div>

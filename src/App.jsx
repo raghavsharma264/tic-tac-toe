@@ -272,6 +272,17 @@ function App() {
         <Typography variant="h4">Welcome back, Login below.</Typography>
       </div>
 
+      <div
+        style={{
+          
+          
+          
+        }}
+      >
+
+
+      </div>
+
       <div>
         <Typography variant="h4">
           Welcome to CodeCourse. Sign up below.
@@ -327,11 +338,6 @@ function App() {
           <br />
           <br />
           <Button variant="contained">Sign up</Button>
-
-
-
-
-          
         </div>
       </Card>
     </>

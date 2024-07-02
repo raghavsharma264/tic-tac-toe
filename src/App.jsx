@@ -274,13 +274,13 @@ function App() {
 
       <div
         style={{
+          display: "flex",
+          justifyContent: "center",
           
-          
-          
+
+
         }}
       >
-
-
       </div>
 
       <div>

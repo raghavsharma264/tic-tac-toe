@@ -299,8 +299,9 @@ function App() {
               <TextField
                 type="password"
                 id="password"
-                
-                
+                sx={{ width: 300 }}
+                label="Password"
+                variant="outlined"
               />
               <br />
               <br />

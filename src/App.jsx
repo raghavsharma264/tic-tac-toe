@@ -302,6 +302,8 @@ function App() {
                 sx={{ width: 300 }}
                 label="Password"
                 variant="outlined"
+                value={password}
+                onChange={handlePasswordChange}
               />
               <br />
               <br />

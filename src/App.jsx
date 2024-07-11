@@ -320,6 +320,11 @@ function App() {
           Welcome to CodeCourse. Sign up below.
         </Typography>
       </div>
+      <Card variant="outlined" sx={{ maxWidth: 400 }}>
+        
+        
+        
+      </Card>
     </>
   );
 }

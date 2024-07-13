@@ -324,8 +324,9 @@ function App() {
         <div style={{ width: 300, padding: 30 }}>
           <TextField
             id="username"
-            
-            
+            sx={{ width: 300 }}
+            label="Username"
+            variant="outlined"
           />
         </div>
       </Card>

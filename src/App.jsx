@@ -327,10 +327,11 @@ function App() {
             sx={{ width: 300 }}
             label="Username"
             variant="outlined"
+            name="username"
+            value={formData.username}
+            onChange={handleChange}
           />
           <br />
-
-          
           <br />
         </div>
       </Card>

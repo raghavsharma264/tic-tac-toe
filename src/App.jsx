@@ -335,8 +335,9 @@ function App() {
           <br />
           <TextField
             type="email"
-            
-            
+            id="email"
+            sx={{ width: 300 }}
+            label="Email"
           />
         </div>
       </Card>

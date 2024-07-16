@@ -339,6 +339,9 @@ function App() {
             sx={{ width: 300 }}
             label="Email"
             variant="outlined"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
           />
           <br />
           <br />

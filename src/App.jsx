@@ -338,7 +338,10 @@ function App() {
             id="email"
             sx={{ width: 300 }}
             label="Email"
+            variant="outlined"
           />
+          <br />
+          <br />
         </div>
       </Card>
     </>

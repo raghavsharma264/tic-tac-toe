@@ -346,9 +346,10 @@ function App() {
           <br />
           <br />
           <TextField
-          
+            type="password"
+            id="password"
 
-          
+            
           />
         </div>
       </Card>

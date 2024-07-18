@@ -261,60 +261,6 @@ function App() {
         </div>
       )}
 
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          paddingTop: 100,
-          padding: 20,
-        }}
-      >
-        <Typography variant="h4">Welcome back, Login below.</Typography>
-      </div>
-
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-        }}
-      >
-        <Card variant="outlined" sx={{ maxWidth: 400 }}>
-          <form onSubmit={handleSubmit}>
-            <div
-              style={{
-                width: 300,
-                padding: 30,
-              }}
-            >
-              <TextField
-                id="username-email"
-                sx={{ width: 300 }}
-                label="Username or Email"
-                variant="outlined"
-                value={usernameOrEmail}
-                onChange={handleUsernameOrEmailChange}
-              />
-              <br />
-              <br />
-              <TextField
-                type="password"
-                id="password"
-                sx={{ width: 300 }}
-                label="Password"
-                variant="outlined"
-                value={password}
-                onChange={handlePasswordChange}
-              />
-              <br />
-              <br />
-              <Button type="submit" variant="contained" color="primary">
-                Login
-              </Button>
-            </div>
-          </form>
-        </Card>
-      </div>
-
       <div>
         <Typography variant="h4">
           Welcome to CodeCourse. Sign up below.
@@ -348,8 +294,9 @@ function App() {
           <TextField
             type="password"
             id="password"
-
-            
+            sx={{ width: 300 }}
+            label="Password"
+            variant="outlined"
           />
         </div>
       </Card>

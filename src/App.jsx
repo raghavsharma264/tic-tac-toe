@@ -303,9 +303,10 @@ function App() {
           />
           <br />
           <br />
-          
-
-          
+          <TextField
+            type="password"
+            id="confirmPassword"
+          />
         </div>
       </Card>
     </>

@@ -306,6 +306,9 @@ function App() {
           <TextField
             type="password"
             id="confirmPassword"
+            sx={{ width: 300 }}
+            label="Confirm Password"
+            variant="outlined"
           />
         </div>
       </Card>

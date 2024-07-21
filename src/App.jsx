@@ -313,6 +313,10 @@ function App() {
             value={formData.confirmPassword}
             onChange={handleChange}
           />
+          <br />
+          <br />
+          
+          
         </div>
       </Card>
     </>

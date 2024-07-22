@@ -261,6 +261,13 @@ function App() {
         </div>
       )}
 
+      <div
+      
+
+      >
+        
+      </div>
+
       <div>
         <Typography variant="h4">
           Welcome to CodeCourse. Sign up below.
@@ -315,9 +322,7 @@ function App() {
           />
           <br />
           <br />
-          <Button variant="contained">
-            Sign up
-          </Button>
+          <Button variant="contained">Sign up</Button>
         </div>
       </Card>
     </>

@@ -264,8 +264,9 @@ function App() {
       <div
         style={{
           display: "flex",
-          
-          
+          justifyContent: "center",
+          paddingTop: 100,
+          padding: 20,
         }}
       >
         <Typography variant="h4">Welcome back, Login below.</Typography>

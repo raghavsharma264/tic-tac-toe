@@ -262,8 +262,11 @@ function App() {
       )}
 
       <div
-      
-      
+        style={{
+          display: "flex",
+          
+          
+        }}
       >
         <Typography variant="h4">Welcome back, Login below.</Typography>
       </div>

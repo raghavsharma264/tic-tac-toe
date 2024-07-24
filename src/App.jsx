@@ -272,6 +272,12 @@ function App() {
         <Typography variant="h4">Welcome back, Login below.</Typography>
       </div>
 
+      <div
+        
+        
+      >
+      </div>
+
       <div>
         <Typography variant="h4">
           Welcome to CodeCourse. Sign up below.

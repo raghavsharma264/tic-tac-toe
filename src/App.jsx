@@ -273,8 +273,10 @@ function App() {
       </div>
 
       <div
-        
-        
+        style={{
+          display: "flex",
+          justifyContent: "center",
+        }}
       >
       </div>
 

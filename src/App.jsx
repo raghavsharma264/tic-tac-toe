@@ -287,9 +287,9 @@ function App() {
               }}
             >
               <TextField
-              
-
-              
+                id="username-email"
+                sx={{ width: 300 }}
+                label="Username or Email"
               />
             </div>
           </form>

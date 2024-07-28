@@ -294,6 +294,10 @@ function App() {
                 value={usernameOrEmail}
                 onChange={handleUsernameOrEmailChange}
               />
+
+              
+              <br />
+              <br />
             </div>
           </form>
         </Card>

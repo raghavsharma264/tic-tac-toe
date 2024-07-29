@@ -298,8 +298,9 @@ function App() {
               <br />
               <TextField
                 type="password"
-                
-                
+                id="password"
+                sx={{ width: 300 }}
+                label="Password"
               />
             </div>
           </form>

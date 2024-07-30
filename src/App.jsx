@@ -301,10 +301,11 @@ function App() {
                 id="password"
                 sx={{ width: 300 }}
                 label="Password"
+                variant="outlined"
+                value={password}
+                onChange={handlePasswordChange}
               />
               <br />
-              <br />
-
               <br />
             </div>
           </form>

@@ -310,10 +310,6 @@ function App() {
               <Button type="submit" variant="contained" color="primary">
                 Login
               </Button>
-              <br />
-              <Button type="submit" variant="contained" color="primary">
-                Login
-              </Button>
             </div>
           </form>
         </Card>
